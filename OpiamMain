@@ -1273,7 +1273,7 @@ local script = G2L["2"];
 		91621141410637,
 	}
 	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraRBXM/opiamhub/refs/heads/main/OpiamUI", true))
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraRBXM/opiamhub/refs/heads/main/OpiamUI"))
 	
 	local IsStudio = game:GetService("RunService"):IsStudio()
 	if table.find(BlackListedGames, game.GameId) then
