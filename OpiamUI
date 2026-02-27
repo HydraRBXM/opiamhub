@@ -11,14 +11,18 @@
 local G2L = {};
 
 -- StarterGui.OpiamGUI.Gui
-G2L["1"] = Instance.new("ScreenGui", game.CoreGui.OpiamGUI);
+if game.CoreGui.OpiamGUI then
+print("heyyy")
+end
+
+G2L["1"] = Instance.new("ScreenGui");
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["DisplayOrder"] = 10000;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[Gui]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
-
+G2L["1"]["Parent"] = game.CoreGui.OpiamGUI:
 
 -- StarterGui.OpiamGUI.Gui.Root
 G2L["2"] = Instance.new("Frame", G2L["1"]);
