@@ -1,0 +1,2031 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 170 | Scripts: 20 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.OpiamGUI
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["DisplayOrder"] = 12000;
+G2L["1"]["Enabled"] = false;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[OpiamGUI]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.OpiamGUI.scripts\execute\start
+G2L["2"] = Instance.new("LocalScript", G2L["1"]);
+G2L["2"]["Name"] = [[scripts\execute\start]];
+
+
+-- StarterGui.OpiamGUI.Scripts
+G2L["3"] = Instance.new("Folder", G2L["1"]);
+G2L["3"]["Name"] = [[Scripts]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits
+G2L["4"] = Instance.new("Folder", G2L["3"]);
+G2L["4"]["Name"] = [[Exploits]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\World
+G2L["5"] = Instance.new("Folder", G2L["4"]);
+G2L["5"]["Name"] = [[Scripts\World]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\World.Scripts\World\Proximity
+G2L["6"] = Instance.new("LocalScript", G2L["5"]);
+G2L["6"]["Name"] = [[Scripts\World\Proximity]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\World.Scripts\World\Lighting
+G2L["7"] = Instance.new("LocalScript", G2L["5"]);
+G2L["7"]["Name"] = [[Scripts\World\Lighting]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Aimbot
+G2L["8"] = Instance.new("LocalScript", G2L["4"]);
+G2L["8"]["Name"] = [[Scripts\Aimbot]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Car
+G2L["9"] = Instance.new("LocalScript", G2L["4"]);
+G2L["9"]["Name"] = [[Scripts\Car]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Car.Flymoving
+G2L["a"] = Instance.new("BoolValue", G2L["9"]);
+G2L["a"]["Name"] = [[Flymoving]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Car.BodyGyro
+G2L["b"] = Instance.new("BodyGyro", G2L["9"]);
+
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Car.BodyVelocity
+G2L["c"] = Instance.new("BodyVelocity", G2L["9"]);
+
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Esp
+G2L["d"] = Instance.new("LocalScript", G2L["4"]);
+G2L["d"]["Name"] = [[Scripts\Esp]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Notifications
+G2L["e"] = Instance.new("LocalScript", G2L["4"]);
+G2L["e"]["Name"] = [[Scripts\Notifications]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Notifications.Sound
+G2L["f"] = Instance.new("Sound", G2L["e"]);
+G2L["f"]["Volume"] = 0.05;
+G2L["f"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+-- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["f"]["SoundId"] = [[rbxassetid://136328893130485]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\PlayerSploits
+G2L["10"] = Instance.new("LocalScript", G2L["4"]);
+G2L["10"]["Name"] = [[Scripts\PlayerSploits]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\RageBot
+G2L["11"] = Instance.new("LocalScript", G2L["4"]);
+G2L["11"]["Name"] = [[Scripts\RageBot]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme
+G2L["12"] = Instance.new("Folder", G2L["3"]);
+G2L["12"]["Name"] = [[Theme]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.Colors
+G2L["13"] = Instance.new("Folder", G2L["12"]);
+G2L["13"]["Name"] = [[Colors]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.Colors.ShadowColor
+G2L["14"] = Instance.new("Color3Value", G2L["13"]);
+G2L["14"]["Name"] = [[ShadowColor]];
+G2L["14"]["Value"] = Color3.fromRGB(61, 21, 81);
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.Colors.Select Color
+G2L["15"] = Instance.new("Color3Value", G2L["13"]);
+G2L["15"]["Name"] = [[Select Color]];
+G2L["15"]["Value"] = Color3.fromRGB(201, 71, 241);
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.Colors.IconSelectColor
+G2L["16"] = Instance.new("Color3Value", G2L["13"]);
+G2L["16"]["Name"] = [[IconSelectColor]];
+G2L["16"]["Value"] = Color3.fromRGB(211, 75, 255);
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.Colors.Color
+G2L["17"] = Instance.new("Color3Value", G2L["13"]);
+G2L["17"]["Name"] = [[Color]];
+G2L["17"]["Value"] = Color3.fromRGB(11, 11, 15);
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.Colors.Select Color2
+G2L["18"] = Instance.new("Color3Value", G2L["13"]);
+G2L["18"]["Name"] = [[Select Color2]];
+G2L["18"]["Value"] = Color3.fromRGB(51, 19, 69);
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.ThemePreset
+G2L["19"] = Instance.new("StringValue", G2L["12"]);
+G2L["19"]["Name"] = [[ThemePreset]];
+G2L["19"]["Value"] = [[Normal]];
+
+
+-- StarterGui.OpiamGUI.Scripts.Theme.ThemePreset.LocalScript
+G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
+
+
+
+-- StarterGui.OpiamGUI.Settings
+G2L["1b"] = Instance.new("Folder", G2L["1"]);
+G2L["1b"]["Name"] = [[Settings]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles
+G2L["1c"] = Instance.new("Folder", G2L["1b"]);
+G2L["1c"]["Name"] = [[Toggles]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Aimbot
+G2L["1d"] = Instance.new("Folder", G2L["1c"]);
+G2L["1d"]["Name"] = [[Aimbot]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Aimbot.Active
+G2L["1e"] = Instance.new("BoolValue", G2L["1d"]);
+G2L["1e"]["Name"] = [[Active]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Aimbot.Debug
+G2L["1f"] = Instance.new("BoolValue", G2L["1d"]);
+G2L["1f"]["Name"] = [[Debug]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Aimbot.Legit
+G2L["20"] = Instance.new("BoolValue", G2L["1d"]);
+G2L["20"]["Name"] = [[Legit]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Aimbot.TeamCheck
+G2L["21"] = Instance.new("BoolValue", G2L["1d"]);
+G2L["21"]["Name"] = [[TeamCheck]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Aimbot.WallCheck
+G2L["22"] = Instance.new("BoolValue", G2L["1d"]);
+G2L["22"]["Name"] = [[WallCheck]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car
+G2L["23"] = Instance.new("Folder", G2L["1c"]);
+G2L["23"]["Name"] = [[Car]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.Boost
+G2L["24"] = Instance.new("BoolValue", G2L["23"]);
+G2L["24"]["Name"] = [[Boost]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.Bouncy
+G2L["25"] = Instance.new("BoolValue", G2L["23"]);
+G2L["25"]["Name"] = [[Bouncy]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.ByeCar
+G2L["26"] = Instance.new("BoolValue", G2L["23"]);
+G2L["26"]["Name"] = [[ByeCar]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.Fling
+G2L["27"] = Instance.new("BoolValue", G2L["23"]);
+G2L["27"]["Name"] = [[Fling]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.Flingcar
+G2L["28"] = Instance.new("BoolValue", G2L["23"]);
+G2L["28"]["Name"] = [[Flingcar]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.FlyCar
+G2L["29"] = Instance.new("BoolValue", G2L["23"]);
+G2L["29"]["Name"] = [[FlyCar]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.GetCar
+G2L["2a"] = Instance.new("BoolValue", G2L["23"]);
+G2L["2a"]["Name"] = [[GetCar]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.Kidnap
+G2L["2b"] = Instance.new("BoolValue", G2L["23"]);
+G2L["2b"]["Name"] = [[Kidnap]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Car.SpinCar
+G2L["2c"] = Instance.new("BoolValue", G2L["23"]);
+G2L["2c"]["Name"] = [[SpinCar]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP
+G2L["2d"] = Instance.new("Folder", G2L["1c"]);
+G2L["2d"]["Name"] = [[ESP]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.BoxEsp
+G2L["2e"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["2e"]["Name"] = [[BoxEsp]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.Debug
+G2L["2f"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["2f"]["Name"] = [[Debug]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.Hitbox Esp
+G2L["30"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["30"]["Name"] = [[Hitbox Esp]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.InventoryEsp
+G2L["31"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["31"]["Name"] = [[InventoryEsp]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.Rainbow
+G2L["32"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["32"]["Name"] = [[Rainbow]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.TeamCheck
+G2L["33"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["33"]["Name"] = [[TeamCheck]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.Toggle
+G2L["34"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["34"]["Name"] = [[Toggle]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.ESP.Tracers
+G2L["35"] = Instance.new("BoolValue", G2L["2d"]);
+G2L["35"]["Name"] = [[Tracers]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Extra
+G2L["36"] = Instance.new("Folder", G2L["1c"]);
+G2L["36"]["Name"] = [[Extra]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Extra.Ragebot
+G2L["37"] = Instance.new("BoolValue", G2L["36"]);
+G2L["37"]["Name"] = [[Ragebot]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Extra.HitboxExpand
+G2L["38"] = Instance.new("BoolValue", G2L["36"]);
+G2L["38"]["Name"] = [[HitboxExpand]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Extra.HitboxRainbow
+G2L["39"] = Instance.new("BoolValue", G2L["36"]);
+G2L["39"]["Name"] = [[HitboxRainbow]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.Extra.JoinLeaveNotifs
+G2L["3a"] = Instance.new("BoolValue", G2L["36"]);
+G2L["3a"]["Name"] = [[JoinLeaveNotifs]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits
+G2L["3b"] = Instance.new("Folder", G2L["1c"]);
+G2L["3b"]["Name"] = [[PlayerSploits]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.Loopws
+G2L["3c"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["3c"]["Name"] = [[Loopws]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.Loopjp
+G2L["3d"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["3d"]["Name"] = [[Loopjp]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.LoopFov
+G2L["3e"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["3e"]["Name"] = [[LoopFov]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.Noclip
+G2L["3f"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["3f"]["Name"] = [[Noclip]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.Fly
+G2L["40"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["40"]["Name"] = [[Fly]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.Naked
+G2L["41"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["41"]["Name"] = [[Naked]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.CFly
+G2L["42"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["42"]["Name"] = [[CFly]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.PlayerSploits.AntiAFK
+G2L["43"] = Instance.new("BoolValue", G2L["3b"]);
+G2L["43"]["Name"] = [[AntiAFK]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.World
+G2L["44"] = Instance.new("Folder", G2L["1c"]);
+G2L["44"]["Name"] = [[World]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.World.Instant
+G2L["45"] = Instance.new("BoolValue", G2L["44"]);
+G2L["45"]["Name"] = [[Instant]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.World.Reach
+G2L["46"] = Instance.new("BoolValue", G2L["44"]);
+G2L["46"]["Name"] = [[Reach]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.World.FullBright
+G2L["47"] = Instance.new("BoolValue", G2L["44"]);
+G2L["47"]["Name"] = [[FullBright]];
+
+
+-- StarterGui.OpiamGUI.Settings.Toggles.World.No Fog
+G2L["48"] = Instance.new("BoolValue", G2L["44"]);
+G2L["48"]["Name"] = [[No Fog]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values
+G2L["49"] = Instance.new("Folder", G2L["1b"]);
+G2L["49"]["Name"] = [[Values]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot
+G2L["4a"] = Instance.new("Folder", G2L["49"]);
+G2L["4a"]["Name"] = [[Aimbot]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot.Accuracy
+G2L["4b"] = Instance.new("NumberValue", G2L["4a"]);
+G2L["4b"]["Name"] = [[Accuracy]];
+G2L["4b"]["Value"] = 100;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot.Fov
+G2L["4c"] = Instance.new("NumberValue", G2L["4a"]);
+G2L["4c"]["Name"] = [[Fov]];
+G2L["4c"]["Value"] = 120;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot.MouseDetection
+G2L["4d"] = Instance.new("StringValue", G2L["4a"]);
+G2L["4d"]["Name"] = [[MouseDetection]];
+G2L["4d"]["Value"] = [[MouseButton2]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot.PartDetection
+G2L["4e"] = Instance.new("StringValue", G2L["4a"]);
+G2L["4e"]["Name"] = [[PartDetection]];
+G2L["4e"]["Value"] = [[Head]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot.Prediction
+G2L["4f"] = Instance.new("NumberValue", G2L["4a"]);
+G2L["4f"]["Name"] = [[Prediction]];
+G2L["4f"]["Value"] = 1;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot.ShakeIntensity
+G2L["50"] = Instance.new("NumberValue", G2L["4a"]);
+G2L["50"]["Name"] = [[ShakeIntensity]];
+G2L["50"]["Value"] = 20;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Aimbot.Smoothness
+G2L["51"] = Instance.new("NumberValue", G2L["4a"]);
+G2L["51"]["Name"] = [[Smoothness]];
+G2L["51"]["Value"] = 1;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.FlySpeed
+G2L["52"] = Instance.new("NumberValue", G2L["49"]);
+G2L["52"]["Name"] = [[FlySpeed]];
+G2L["52"]["Value"] = 50;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.KidnapTarget
+G2L["53"] = Instance.new("StringValue", G2L["49"]);
+G2L["53"]["Name"] = [[KidnapTarget]];
+G2L["53"]["Value"] = [[blitzo602]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.RageBot
+G2L["54"] = Instance.new("Folder", G2L["49"]);
+G2L["54"]["Name"] = [[RageBot]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.RageBot.PosAbove
+G2L["55"] = Instance.new("CFrameValue", G2L["54"]);
+G2L["55"]["Name"] = [[PosAbove]];
+G2L["55"]["Value"] = CFrame.new(Vector3.new(0, 20, 0), Vector3.new(0, 0, -1));
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra
+G2L["56"] = Instance.new("Folder", G2L["49"]);
+G2L["56"]["Name"] = [[Extra]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra.HitboxExpand
+G2L["57"] = Instance.new("NumberValue", G2L["56"]);
+G2L["57"]["Name"] = [[HitboxExpand]];
+G2L["57"]["Value"] = 5;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra.HitboxTransparency
+G2L["58"] = Instance.new("NumberValue", G2L["56"]);
+G2L["58"]["Name"] = [[HitboxTransparency]];
+G2L["58"]["Value"] = 5;
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra.Fov
+G2L["59"] = Instance.new("NumberValue", G2L["56"]);
+G2L["59"]["Name"] = [[Fov]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra.Speed
+G2L["5a"] = Instance.new("NumberValue", G2L["56"]);
+G2L["5a"]["Name"] = [[Speed]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra.Jump
+G2L["5b"] = Instance.new("NumberValue", G2L["56"]);
+G2L["5b"]["Name"] = [[Jump]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra.TextForProxs
+G2L["5c"] = Instance.new("StringValue", G2L["56"]);
+G2L["5c"]["Name"] = [[TextForProxs]];
+
+
+-- StarterGui.OpiamGUI.Settings.Values.Extra.ReachForProxs
+G2L["5d"] = Instance.new("NumberValue", G2L["56"]);
+G2L["5d"]["Name"] = [[ReachForProxs]];
+
+
+-- StarterGui.OpiamGUI.Holder
+G2L["5e"] = Instance.new("Frame", G2L["1"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Name"] = [[Holder]];
+G2L["5e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Aimbot
+G2L["5f"] = Instance.new("Frame", G2L["5e"]);
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Name"] = [[Aimbot]];
+G2L["5f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons
+G2L["60"] = Instance.new("Frame", G2L["5e"]);
+G2L["60"]["BorderSizePixel"] = 0;
+G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["60"]["Name"] = [[UI Addons]];
+G2L["60"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top
+G2L["61"] = Instance.new("Frame", G2L["60"]);
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["Size"] = UDim2.new(0.36869, 0, 0.04809, 0);
+G2L["61"]["Position"] = UDim2.new(0.31566, 0, 0, 0);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Name"] = [[Top]];
+G2L["61"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.Time
+G2L["62"] = Instance.new("Frame", G2L["61"]);
+G2L["62"]["Visible"] = false;
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 23);
+G2L["62"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["62"]["Position"] = UDim2.new(0.36244, 0, 0.15306, 0);
+G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["Name"] = [[Time]];
+G2L["62"]["LayoutOrder"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.Time.UICorner
+G2L["63"] = Instance.new("UICorner", G2L["62"]);
+G2L["63"]["CornerRadius"] = UDim.new(0.1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.Time.TextLabel
+G2L["64"] = Instance.new("TextLabel", G2L["62"]);
+G2L["64"]["TextWrapped"] = true;
+G2L["64"]["BorderSizePixel"] = 0;
+G2L["64"]["TextSize"] = 14;
+G2L["64"]["TextScaled"] = true;
+G2L["64"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["BackgroundTransparency"] = 1;
+G2L["64"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["64"]["Text"] = [[0:00 AM]];
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.Time.TextLabel.LocalScript
+G2L["65"] = Instance.new("LocalScript", G2L["64"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.Time.UIStroke
+G2L["66"] = Instance.new("UIStroke", G2L["62"]);
+G2L["66"]["Color"] = Color3.fromRGB(41, 41, 56);
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.UIListLayout
+G2L["67"] = Instance.new("UIListLayout", G2L["61"]);
+G2L["67"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["67"]["Wraps"] = true;
+G2L["67"]["Padding"] = UDim.new(0, 4);
+G2L["67"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+G2L["67"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["67"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.FPS
+G2L["68"] = Instance.new("Frame", G2L["61"]);
+G2L["68"]["Visible"] = false;
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 23);
+G2L["68"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["68"]["Position"] = UDim2.new(0.36244, 0, 0.15306, 0);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["Name"] = [[FPS]];
+G2L["68"]["LayoutOrder"] = 2;
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.FPS.UICorner
+G2L["69"] = Instance.new("UICorner", G2L["68"]);
+G2L["69"]["CornerRadius"] = UDim.new(0.1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.FPS.TextLabel
+G2L["6a"] = Instance.new("TextLabel", G2L["68"]);
+G2L["6a"]["TextWrapped"] = true;
+G2L["6a"]["BorderSizePixel"] = 0;
+G2L["6a"]["TextSize"] = 14;
+G2L["6a"]["TextScaled"] = true;
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["6a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["BackgroundTransparency"] = 1;
+G2L["6a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["Text"] = [[FPS: 0]];
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.FPS.TextLabel.LocalScript
+G2L["6b"] = Instance.new("LocalScript", G2L["6a"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.FPS.UIStroke
+G2L["6c"] = Instance.new("UIStroke", G2L["68"]);
+G2L["6c"]["Color"] = Color3.fromRGB(41, 41, 56);
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.MS
+G2L["6d"] = Instance.new("Frame", G2L["61"]);
+G2L["6d"]["Visible"] = false;
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 23);
+G2L["6d"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["6d"]["Position"] = UDim2.new(0.36244, 0, 0.15306, 0);
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Name"] = [[MS]];
+G2L["6d"]["LayoutOrder"] = 3;
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.MS.UICorner
+G2L["6e"] = Instance.new("UICorner", G2L["6d"]);
+G2L["6e"]["CornerRadius"] = UDim.new(0.1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.MS.TextLabel
+G2L["6f"] = Instance.new("TextLabel", G2L["6d"]);
+G2L["6f"]["TextWrapped"] = true;
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["TextSize"] = 14;
+G2L["6f"]["TextScaled"] = true;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["6f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["BackgroundTransparency"] = 1;
+G2L["6f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["Text"] = [[PING: 0ms]];
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.MS.TextLabel.LocalScript
+G2L["70"] = Instance.new("LocalScript", G2L["6f"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.MS.UIStroke
+G2L["71"] = Instance.new("UIStroke", G2L["6d"]);
+G2L["71"]["Color"] = Color3.fromRGB(41, 41, 56);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel
+G2L["72"] = Instance.new("Frame", G2L["5e"]);
+G2L["72"]["Visible"] = false;
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37);
+G2L["72"]["Size"] = UDim2.new(0.26967, 0, 0.35966, 0);
+G2L["72"]["Position"] = UDim2.new(0.36464, 0, 0.31936, 0);
+G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["Name"] = [[Settings Panel]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Dragify
+G2L["73"] = Instance.new("LocalScript", G2L["72"]);
+G2L["73"]["Name"] = [[Dragify]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Aimbot
+G2L["74"] = Instance.new("TextLabel", G2L["72"]);
+G2L["74"]["TextWrapped"] = true;
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["TextSize"] = 14;
+G2L["74"]["TextScaled"] = true;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["74"]["TextColor3"] = Color3.fromRGB(195, 195, 195);
+G2L["74"]["BackgroundTransparency"] = 1;
+G2L["74"]["Size"] = UDim2.new(0.26369, 0, 0.07559, 0);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Text"] = [[MI - Settings]];
+G2L["74"]["Name"] = [[Aimbot]];
+G2L["74"]["Position"] = UDim2.new(-0.00004, 0, 0, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder
+G2L["75"] = Instance.new("Frame", G2L["72"]);
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["75"]["Size"] = UDim2.new(1, 0, 0.92414, 0);
+G2L["75"]["Position"] = UDim2.new(0, 0, 0.07559, 0);
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Name"] = [[Holder]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame
+G2L["76"] = Instance.new("ScrollingFrame", G2L["75"]);
+G2L["76"]["Active"] = true;
+G2L["76"]["BorderSizePixel"] = 0;
+G2L["76"]["CanvasSize"] = UDim2.new(0, 0, 3, 0);
+G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["76"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["76"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["76"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.UIListLayout
+G2L["77"] = Instance.new("UIListLayout", G2L["76"]);
+G2L["77"]["Wraps"] = true;
+G2L["77"]["Padding"] = UDim.new(0, 8);
+G2L["77"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core
+G2L["78"] = Instance.new("Frame", G2L["76"]);
+G2L["78"]["BorderSizePixel"] = 0;
+G2L["78"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37);
+G2L["78"]["Size"] = UDim2.new(0, 398, 0, 176);
+G2L["78"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["Name"] = [[- Core]];
+G2L["78"]["LayoutOrder"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Aimbot
+G2L["79"] = Instance.new("TextLabel", G2L["78"]);
+G2L["79"]["TextWrapped"] = true;
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["TextSize"] = 14;
+G2L["79"]["TextScaled"] = true;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["79"]["TextColor3"] = Color3.fromRGB(195, 195, 195);
+G2L["79"]["BackgroundTransparency"] = 1;
+G2L["79"]["Size"] = UDim2.new(0.3265, 0, 0.13565, 0);
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Text"] = [[Extra]];
+G2L["79"]["Name"] = [[Aimbot]];
+G2L["79"]["Position"] = UDim2.new(0.33665, 0, 0, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder
+G2L["7a"] = Instance.new("Frame", G2L["78"]);
+G2L["7a"]["BorderSizePixel"] = 0;
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["Size"] = UDim2.new(1.00754, 0, 0.86897, 0);
+G2L["7a"]["Position"] = UDim2.new(-0.00754, 0, 0.13103, 0);
+G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["Name"] = [[Holder]];
+G2L["7a"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.UIListLayout
+G2L["7b"] = Instance.new("UIListLayout", G2L["7a"]);
+G2L["7b"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["7b"]["Padding"] = UDim.new(0, 6);
+G2L["7b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder
+G2L["7c"] = Instance.new("Frame", G2L["7a"]);
+G2L["7c"]["BorderSizePixel"] = 0;
+G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["Size"] = UDim2.new(0.95262, 0, 0.16946, 0);
+G2L["7c"]["Position"] = UDim2.new(0.02369, 0, -0, 0);
+G2L["7c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["Name"] = [[inholder]];
+G2L["7c"]["LayoutOrder"] = 1;
+G2L["7c"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.TextLabel
+G2L["7d"] = Instance.new("TextLabel", G2L["7c"]);
+G2L["7d"]["TextWrapped"] = true;
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["TextSize"] = 14;
+G2L["7d"]["TextScaled"] = true;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7d"]["TextColor3"] = Color3.fromRGB(164, 164, 164);
+G2L["7d"]["BackgroundTransparency"] = 1;
+G2L["7d"]["Size"] = UDim2.new(0.28272, 0, 0.95652, 0);
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Text"] = [[Pin Fps]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle
+G2L["7e"] = Instance.new("TextButton", G2L["7c"]);
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["TextSize"] = 14;
+G2L["7e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["7e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7e"]["Size"] = UDim2.new(0.06545, 0, 0.95652, 0);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["Text"] = [[]];
+G2L["7e"]["Name"] = [[Toggle]];
+G2L["7e"]["Position"] = UDim2.new(0.92408, 0, 0.04348, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+G2L["7f"] = Instance.new("LocalScript", G2L["7e"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.UICorner
+G2L["80"] = Instance.new("UICorner", G2L["7e"]);
+G2L["80"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder
+G2L["81"] = Instance.new("Frame", G2L["7a"]);
+G2L["81"]["BorderSizePixel"] = 0;
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["Size"] = UDim2.new(0.95262, 0, 0.16946, 0);
+G2L["81"]["Position"] = UDim2.new(0.02369, 0, -0, 0);
+G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["Name"] = [[inholder]];
+G2L["81"]["LayoutOrder"] = 2;
+G2L["81"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.TextLabel
+G2L["82"] = Instance.new("TextLabel", G2L["81"]);
+G2L["82"]["TextWrapped"] = true;
+G2L["82"]["BorderSizePixel"] = 0;
+G2L["82"]["TextSize"] = 14;
+G2L["82"]["TextScaled"] = true;
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["82"]["TextColor3"] = Color3.fromRGB(164, 164, 164);
+G2L["82"]["BackgroundTransparency"] = 1;
+G2L["82"]["Size"] = UDim2.new(0.28272, 0, 0.95652, 0);
+G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["82"]["Text"] = [[Pin Ping]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle
+G2L["83"] = Instance.new("TextButton", G2L["81"]);
+G2L["83"]["BorderSizePixel"] = 0;
+G2L["83"]["TextSize"] = 14;
+G2L["83"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["83"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["83"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["83"]["Size"] = UDim2.new(0.06545, 0, 0.95652, 0);
+G2L["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["83"]["Text"] = [[]];
+G2L["83"]["Name"] = [[Toggle]];
+G2L["83"]["Position"] = UDim2.new(0.92408, 0, 0.04348, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+G2L["84"] = Instance.new("LocalScript", G2L["83"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.UICorner
+G2L["85"] = Instance.new("UICorner", G2L["83"]);
+G2L["85"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder
+G2L["86"] = Instance.new("Frame", G2L["7a"]);
+G2L["86"]["BorderSizePixel"] = 0;
+G2L["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["86"]["Size"] = UDim2.new(0.95262, 0, 0.16946, 0);
+G2L["86"]["Position"] = UDim2.new(0.02369, 0, -0, 0);
+G2L["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["86"]["Name"] = [[inholder]];
+G2L["86"]["LayoutOrder"] = 3;
+G2L["86"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.TextLabel
+G2L["87"] = Instance.new("TextLabel", G2L["86"]);
+G2L["87"]["TextWrapped"] = true;
+G2L["87"]["BorderSizePixel"] = 0;
+G2L["87"]["TextSize"] = 14;
+G2L["87"]["TextScaled"] = true;
+G2L["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["87"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["87"]["TextColor3"] = Color3.fromRGB(164, 164, 164);
+G2L["87"]["BackgroundTransparency"] = 1;
+G2L["87"]["Size"] = UDim2.new(0.47644, 0, 0.95652, 0);
+G2L["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["87"]["Text"] = [[Join/Leave Notifier]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle
+G2L["88"] = Instance.new("TextButton", G2L["86"]);
+G2L["88"]["BorderSizePixel"] = 0;
+G2L["88"]["TextSize"] = 14;
+G2L["88"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["88"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["88"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["88"]["Size"] = UDim2.new(0.06545, 0, 0.95652, 0);
+G2L["88"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["88"]["Text"] = [[]];
+G2L["88"]["Name"] = [[Toggle]];
+G2L["88"]["Position"] = UDim2.new(0.92408, 0, 0.04348, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+G2L["89"] = Instance.new("LocalScript", G2L["88"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.UICorner
+G2L["8a"] = Instance.new("UICorner", G2L["88"]);
+G2L["8a"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder
+G2L["8b"] = Instance.new("Frame", G2L["7a"]);
+G2L["8b"]["BorderSizePixel"] = 0;
+G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8b"]["Size"] = UDim2.new(0.95262, 0, 0.16946, 0);
+G2L["8b"]["Position"] = UDim2.new(0.02369, 0, -0, 0);
+G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8b"]["Name"] = [[inholder]];
+G2L["8b"]["LayoutOrder"] = 4;
+G2L["8b"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.TextLabel
+G2L["8c"] = Instance.new("TextLabel", G2L["8b"]);
+G2L["8c"]["TextWrapped"] = true;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextSize"] = 14;
+G2L["8c"]["TextScaled"] = true;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8c"]["TextColor3"] = Color3.fromRGB(164, 164, 164);
+G2L["8c"]["BackgroundTransparency"] = 1;
+G2L["8c"]["Size"] = UDim2.new(0.41885, 0, 0.95652, 0);
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Text"] = [[Execute MI v1]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle
+G2L["8d"] = Instance.new("TextButton", G2L["8b"]);
+G2L["8d"]["BorderSizePixel"] = 0;
+G2L["8d"]["TextSize"] = 14;
+G2L["8d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8d"]["Size"] = UDim2.new(0.06545, 0, 0.95652, 0);
+G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["Text"] = [[]];
+G2L["8d"]["Name"] = [[Toggle]];
+G2L["8d"]["Position"] = UDim2.new(0.92408, 0, 0.04348, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.UICorner
+G2L["8e"] = Instance.new("UICorner", G2L["8d"]);
+G2L["8e"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder
+G2L["8f"] = Instance.new("Frame", G2L["7a"]);
+G2L["8f"]["BorderSizePixel"] = 0;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["Size"] = UDim2.new(0.95262, 0, 0.12369, 0);
+G2L["8f"]["Position"] = UDim2.new(0.02369, 0, 0.83478, 0);
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["Name"] = [[inholder]];
+G2L["8f"]["LayoutOrder"] = 5;
+G2L["8f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.TextLabel
+G2L["90"] = Instance.new("TextLabel", G2L["8f"]);
+G2L["90"]["TextWrapped"] = true;
+G2L["90"]["BorderSizePixel"] = 0;
+G2L["90"]["TextSize"] = 14;
+G2L["90"]["TextScaled"] = true;
+G2L["90"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["90"]["TextColor3"] = Color3.fromRGB(164, 164, 164);
+G2L["90"]["BackgroundTransparency"] = 1;
+G2L["90"]["Size"] = UDim2.new(0.22251, 0, 0.95652, 0);
+G2L["90"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["90"]["Text"] = [[Show Time]];
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle
+G2L["91"] = Instance.new("TextButton", G2L["8f"]);
+G2L["91"]["BorderSizePixel"] = 0;
+G2L["91"]["TextSize"] = 14;
+G2L["91"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["91"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["91"]["Size"] = UDim2.new(0.06545, 0, 0.95652, 0);
+G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["Text"] = [[]];
+G2L["91"]["Name"] = [[Toggle]];
+G2L["91"]["Position"] = UDim2.new(0.92408, 0, 0.04348, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+G2L["92"] = Instance.new("LocalScript", G2L["91"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.UICorner
+G2L["93"] = Instance.new("UICorner", G2L["91"]);
+G2L["93"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.UIPadding
+G2L["94"] = Instance.new("UIPadding", G2L["76"]);
+G2L["94"]["PaddingTop"] = UDim.new(0, 6);
+G2L["94"]["PaddingLeft"] = UDim.new(0, 9);
+
+
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Aimbot
+G2L["95"] = Instance.new("TextLabel", G2L["72"]);
+G2L["95"]["TextWrapped"] = true;
+G2L["95"]["BorderSizePixel"] = 0;
+G2L["95"]["TextSize"] = 14;
+G2L["95"]["TextScaled"] = true;
+G2L["95"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["95"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["95"]["TextColor3"] = Color3.fromRGB(195, 195, 195);
+G2L["95"]["BackgroundTransparency"] = 1;
+G2L["95"]["Size"] = UDim2.new(0.5095, 0, 0.07559, 0);
+G2L["95"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["95"]["Text"] = [[Current Version: 1.55]];
+G2L["95"]["Name"] = [[Aimbot]];
+G2L["95"]["Position"] = UDim2.new(0.48924, 0, 0, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel
+G2L["96"] = Instance.new("Frame", G2L["5e"]);
+G2L["96"]["Visible"] = false;
+G2L["96"]["BorderSizePixel"] = 0;
+G2L["96"]["BackgroundColor3"] = Color3.fromRGB(23, 34, 63);
+G2L["96"]["ClipsDescendants"] = true;
+G2L["96"]["Size"] = UDim2.new(0.2399, 0, 0.34525, 0);
+G2L["96"]["Position"] = UDim2.new(0.51641, 0, 0.45253, 0);
+G2L["96"]["Name"] = [[Debug Panel]];
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.UIStroke
+G2L["97"] = Instance.new("UIStroke", G2L["96"]);
+G2L["97"]["Color"] = Color3.fromRGB(43, 43, 75);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.Shadow
+G2L["98"] = Instance.new("ImageLabel", G2L["96"]);
+G2L["98"]["ZIndex"] = 0;
+G2L["98"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+G2L["98"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["98"]["ImageTransparency"] = 0.55;
+G2L["98"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["98"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["98"]["Image"] = [[rbxassetid://6014261993]];
+G2L["98"]["Size"] = UDim2.new(1.07895, 0, 1.10714, 0);
+G2L["98"]["BackgroundTransparency"] = 1;
+G2L["98"]["Name"] = [[Shadow]];
+G2L["98"]["Position"] = UDim2.new(0.5, 0, 0.52143, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar
+G2L["99"] = Instance.new("Frame", G2L["96"]);
+G2L["99"]["ZIndex"] = 2;
+G2L["99"]["BorderSizePixel"] = 0;
+G2L["99"]["BackgroundColor3"] = Color3.fromRGB(16, 53, 97);
+G2L["99"]["Size"] = UDim2.new(1, 0, 0.13571, 0);
+G2L["99"]["Name"] = [[TitleBar]];
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Frame
+G2L["9a"] = Instance.new("Frame", G2L["99"]);
+G2L["9a"]["BorderSizePixel"] = 0;
+G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(27, 75, 123);
+G2L["9a"]["Size"] = UDim2.new(1, 0, 0.02632, 0);
+G2L["9a"]["Position"] = UDim2.new(0, 0, 0.97368, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Title
+G2L["9b"] = Instance.new("TextLabel", G2L["99"]);
+G2L["9b"]["ZIndex"] = 3;
+G2L["9b"]["TextSize"] = 13;
+G2L["9b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9b"]["TextColor3"] = Color3.fromRGB(201, 201, 233);
+G2L["9b"]["BackgroundTransparency"] = 1;
+G2L["9b"]["Size"] = UDim2.new(0.31579, 0, 1, 0);
+G2L["9b"]["Text"] = [[Debug UI]];
+G2L["9b"]["Name"] = [[Title]];
+G2L["9b"]["Position"] = UDim2.new(0.03684, 0, 0, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs
+G2L["9c"] = Instance.new("Frame", G2L["99"]);
+G2L["9c"]["ZIndex"] = 3;
+G2L["9c"]["Size"] = UDim2.new(0.36842, 0, 0.68421, 0);
+G2L["9c"]["Position"] = UDim2.new(0.60526, 0, 0.15789, 0);
+G2L["9c"]["Name"] = [[Tabs]];
+G2L["9c"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.UIListLayout
+G2L["9d"] = Instance.new("UIListLayout", G2L["9c"]);
+G2L["9d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Right;
+G2L["9d"]["Padding"] = UDim.new(0, 6);
+G2L["9d"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+G2L["9d"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.Aimbot
+G2L["9e"] = Instance.new("TextButton", G2L["9c"]);
+G2L["9e"]["BorderSizePixel"] = 0;
+G2L["9e"]["TextSize"] = 12;
+G2L["9e"]["AutoButtonColor"] = false;
+G2L["9e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9e"]["BackgroundColor3"] = Color3.fromRGB(15, 22, 40);
+G2L["9e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9e"]["ZIndex"] = 4;
+G2L["9e"]["Size"] = UDim2.new(0.44286, 0, 1, 0);
+G2L["9e"]["Text"] = [[Aimbot]];
+G2L["9e"]["Name"] = [[Aimbot]];
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.Aimbot.LocalScript
+G2L["9f"] = Instance.new("LocalScript", G2L["9e"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.Aimbot.UICorner
+G2L["a0"] = Instance.new("UICorner", G2L["9e"]);
+G2L["a0"]["CornerRadius"] = UDim.new(0, 6);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.Aimbot.UIStroke
+G2L["a1"] = Instance.new("UIStroke", G2L["9e"]);
+G2L["a1"]["Color"] = Color3.fromRGB(43, 75, 123);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.ESP
+G2L["a2"] = Instance.new("TextButton", G2L["9c"]);
+G2L["a2"]["BorderSizePixel"] = 0;
+G2L["a2"]["TextSize"] = 12;
+G2L["a2"]["AutoButtonColor"] = false;
+G2L["a2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(13, 19, 35);
+G2L["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a2"]["ZIndex"] = 4;
+G2L["a2"]["Size"] = UDim2.new(0.44286, 0, 1, 0);
+G2L["a2"]["Text"] = [[ESP]];
+G2L["a2"]["Name"] = [[ESP]];
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.ESP.LocalScript
+G2L["a3"] = Instance.new("LocalScript", G2L["a2"]);
+
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.ESP.UICorner
+G2L["a4"] = Instance.new("UICorner", G2L["a2"]);
+G2L["a4"]["CornerRadius"] = UDim.new(0, 6);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.ESP.UIStroke
+G2L["a5"] = Instance.new("UIStroke", G2L["a2"]);
+G2L["a5"]["Color"] = Color3.fromRGB(43, 75, 123);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.Footer
+G2L["a6"] = Instance.new("Frame", G2L["96"]);
+G2L["a6"]["ZIndex"] = 2;
+G2L["a6"]["BorderSizePixel"] = 0;
+G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(16, 27, 49);
+G2L["a6"]["Size"] = UDim2.new(1, 0, 0.10714, 0);
+G2L["a6"]["Position"] = UDim2.new(0, 0, 0.89286, 0);
+G2L["a6"]["Name"] = [[Footer]];
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.Footer.Frame
+G2L["a7"] = Instance.new("Frame", G2L["a6"]);
+G2L["a7"]["BorderSizePixel"] = 0;
+G2L["a7"]["BackgroundColor3"] = Color3.fromRGB(27, 43, 75);
+G2L["a7"]["Size"] = UDim2.new(1, 0, 0.03333, 0);
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.Debug Holder
+G2L["a8"] = Instance.new("Frame", G2L["96"]);
+G2L["a8"]["BorderSizePixel"] = 0;
+G2L["a8"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["a8"]["Size"] = UDim2.new(0.95263, 0, 0.75898, 0);
+G2L["a8"]["Position"] = UDim2.new(0.02105, 0, 0.13387, 0);
+G2L["a8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a8"]["Name"] = [[Debug Holder]];
+G2L["a8"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.Debug Holder.Aimbot
+G2L["a9"] = Instance.new("TextLabel", G2L["a8"]);
+G2L["a9"]["TextWrapped"] = true;
+G2L["a9"]["BorderSizePixel"] = 0;
+G2L["a9"]["TextSize"] = 14;
+G2L["a9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a9"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["a9"]["TextScaled"] = true;
+G2L["a9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a9"]["TextColor3"] = Color3.fromRGB(147, 151, 177);
+G2L["a9"]["BackgroundTransparency"] = 1;
+G2L["a9"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["a9"]["Visible"] = false;
+G2L["a9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a9"]["Text"] = [[Waiting for aimbot input...]];
+G2L["a9"]["Name"] = [[Aimbot]];
+
+
+-- StarterGui.OpiamGUI.Holder.Debug Panel.Debug Holder.Esp
+G2L["aa"] = Instance.new("TextLabel", G2L["a8"]);
+G2L["aa"]["TextWrapped"] = true;
+G2L["aa"]["BorderSizePixel"] = 0;
+G2L["aa"]["TextSize"] = 14;
+G2L["aa"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["aa"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["aa"]["TextScaled"] = true;
+G2L["aa"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["aa"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["aa"]["TextColor3"] = Color3.fromRGB(147, 151, 177);
+G2L["aa"]["BackgroundTransparency"] = 1;
+G2L["aa"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["aa"]["Visible"] = false;
+G2L["aa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["aa"]["Text"] = [[Waiting for ESP input...]];
+G2L["aa"]["Name"] = [[Esp]];
+
+
+-- StarterGui.OpiamGUI.scripts\execute\start
+local function C_2()
+local script = G2L["2"];
+	local coregui = game.CoreGui
+	local BlackListedGames = {
+		131533449936591,
+		91621141410637,
+	}
+	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraRBXM/opiamhub/refs/heads/main/OpiamUI", true))
+	
+	local IsStudio = game:GetService("RunService"):IsStudio()
+	if table.find(BlackListedGames, game.GameId) then
+		print("Game is blacklisted from using Opiam")
+		game.Players.LocalPlayer:Kick("Opiam v3 Has Been Detected By Anti-Cheat In This Game!")
+		return
+	end
+	
+	local function enableAllScripts(parent)
+		for _, child in pairs(parent:GetChildren()) do
+			if child:IsA("LocalScript") or child:IsA("Script") or child:IsA("ModuleScript") then
+				child.Enabled = true
+			end
+			if #child:GetChildren() > 0 then
+				enableAllScripts(child)
+			end
+		end
+	end
+	
+	if IsStudio then
+		script.Parent.Gui.Root.Sounds.Execute:Play()
+		enableAllScripts(script.Parent.Scripts.Exploits)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Opiam v3";
+			Text = "OPIAM: Studio Detected";
+			Icon = "http://www.roblox.com/asset/?id=111424638018338";
+			Duration = "15";
+		})
+		
+		wait(1)
+		
+		script:Destroy()
+		return
+	end
+	
+	if coregui then
+		if coregui:FindFirstChild("Matcha-2.2") then
+			script.Parent.Gui.Root.Sounds.Warn:Play()
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Opiam v3";
+				Text = "Already Attached!";
+				Icon = "http://www.roblox.com/asset/?id=111424638018338";
+				Duration = "15";
+			})
+			script.Parent:Destroy()
+			return
+		end
+		script.Parent = coregui
+		script.Parent.Gui.Root.Sounds.Execute:Play()
+		local title = "Opiam v3"
+		local author = "By @lolcatwastaken"
+		local desc = "Opiam v3 is now loaded and executed and is ready to use!"
+		local width = 50
+		local function center(text)
+			local totalPad = width - #text
+			local left = math.floor(totalPad / 2)
+			local right = totalPad - left
+			return string.rep("-", left) .. text .. string.rep("-", right)
+		end
+		print(string.rep("-", width))
+		print(center(" " .. title .. " "))
+		print(center(" " .. author .. " "))
+		print(center(" " .. desc .. " "))
+		print(string.rep("-", width))
+		enableAllScripts(script.Parent.Scripts.Exploits)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Opiam v3";
+			Text = "Attached To CoreGui!";
+			Icon = "http://www.roblox.com/asset/?id=111424638018338";
+			Duration = "15";
+		})
+		wait(1)
+		script:Destroy()
+	else
+		script.Parent.Root.Sounds.Warn:Play()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Opiam v3";
+			Text = "Couldnt Attach To CoreGui Somehow..?";
+			Icon = "http://www.roblox.com/asset/?id=111424638018338";
+			Duration = "15";
+		})
+	end
+end;
+task.spawn(C_2);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\World.Scripts\World\Proximity
+local function C_6()
+local script = G2L["6"];
+	print("Scripts/World/Proximity: Protected By Opiam Obfuscation 2.0")
+	local _s=string.char;local _WS=game:GetService(_s(87,111,114,107,115,112,97,99,101));local _ST=script.Parent.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)];local _VV=_ST[_s(86,97,108,117,101,115)][_s(69,120,116,114,97)];local _TV=_ST[_s(84,111,103,103,108,101,115)][_s(87,111,114,108,100)];local _PX={};local _SI={};local _SR={};local _SX={};local function _AP(p)local _ii=_TV[_s(73,110,115,116,97,110,116)][_s(86,97,108,117,101)];local _re=_TV[_s(82,101,97,99,104)][_s(86,97,108,117,101)];local _to=_VV[_s(84,101,120,116,70,111,114,80,114,111,120,115)][_s(86,97,108,117,101)];local _rv=_VV[_s(82,101,97,99,104,70,111,114,80,114,111,120,115)][_s(86,97,108,117,101)];p[_s(72,111,108,100,68,117,114,97,116,105,111,110)]=_ii and 0 or _SI[p];p[_s(77,97,120,65,99,116,105,118,97,116,105,111,110,68,105,115,116,97,110,99,101)]=_re and _rv or _SR[p];p[_s(65,99,116,105,111,110,84,101,120,116)]=(_to~=_s())and _to or _SX[p]end;local function _UA()for p in pairs(_PX)do _AP(p)end end;local function _RP(p)if _PX[p]then return end;_PX[p]=true;_SI[p]=p[_s(72,111,108,100,68,117,114,97,116,105,111,110)];_SR[p]=p[_s(77,97,120,65,99,116,105,118,97,116,105,111,110,68,105,115,116,97,110,99,101)];_SX[p]=p[_s(65,99,116,105,111,110,84,101,120,116)];_AP(p);p.Destroying:Connect(function()_PX[p]=nil;_SI[p]=nil;_SR[p]=nil;_SX[p]=nil end)end;local function _SW()for _,o in pairs(_WS:GetDescendants())do if o:IsA(_s(80,114,111,120,105,109,105,116,121,80,114,111,109,112,116))then _RP(o)end end end;_WS.DescendantAdded:Connect(function(o)if o:IsA(_s(80,114,111,120,105,109,105,116,121,80,114,111,109,112,116))then _RP(o)end end);_TV[_s(73,110,115,116,97,110,116)].Changed:Connect(_UA);_TV[_s(82,101,97,99,104)].Changed:Connect(_UA);_VV[_s(84,101,120,116,70,111,114,80,114,111,120,115)].Changed:Connect(_UA);_VV[_s(82,101,97,99,104,70,111,114,80,114,111,120,115)].Changed:Connect(_UA);_SW()
+end;
+task.spawn(C_6);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\World.Scripts\World\Lighting
+local function C_7()
+local script = G2L["7"];
+	--// [[ OBFUSCATED ]] --
+	local _s=string.char;local _LT=game:GetService(_s(76,105,103,104,116,105,110,103));local _SL=nil;local _SF=nil;local _TV=script.Parent.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(84,111,103,103,108,101,115)][_s(87,111,114,108,100)];local function _SVL()if not _SL then _SL={[_s(66,114,105,103,104,116,110,101,115,115)]=_LT[_s(66,114,105,103,104,116,110,101,115,115)],[_s(67,108,111,99,107,84,105,109,101)]=_LT[_s(67,108,111,99,107,84,105,109,101)],[_s(71,108,111,98,97,108,83,104,97,100,111,119,115)]=_LT[_s(71,108,111,98,97,108,83,104,97,100,111,119,115)],[_s(65,109,98,105,101,110,116)]=_LT[_s(65,109,98,105,101,110,116)],[_s(79,117,116,100,111,111,114,65,109,98,105,101,110,116)]=_LT[_s(79,117,116,100,111,111,114,65,109,98,105,101,110,116)]}end;if not _SF then _SF={[_s(70,111,103,83,116,97,114,116)]=_LT[_s(70,111,103,83,116,97,114,116)],[_s(70,111,103,69,110,100)]=_LT[_s(70,111,103,69,110,100)]}end end;local function _RL()if _SL then for p,v in pairs(_SL)do _LT[p]=v end end;if _SF then for p,v in pairs(_SF)do _LT[p]=v end end end;local function _UL()_SVL();if _TV[_s(70,117,108,108,66,114,105,103,104,116)][_s(86,97,108,117,101)]then _LT[_s(66,114,105,103,104,116,110,101,115,115)]=5;_LT[_s(67,108,111,99,107,84,105,109,101)]=14;_LT[_s(71,108,111,98,97,108,83,104,97,100,111,119,115)]=false;_LT[_s(65,109,98,105,101,110,116)]=Color3.new(1,1,1);_LT[_s(79,117,116,100,111,111,114,65,109,98,105,101,110,116)]=Color3.new(1,1,1)else _RL()end;if _TV[_s(78,111,32,70,111,103)][_s(86,97,108,117,101)]then _LT[_s(70,111,103,83,116,97,114,116)]=100000;_LT[_s(70,111,103,69,110,100)]=100000 elseif not _TV[_s(70,117,108,108,66,114,105,103,104,116)][_s(86,97,108,117,101)]then if _SF then _LT[_s(70,111,103,83,116,97,114,116)]=_SF[_s(70,111,103,83,116,97,114,116)];_LT[_s(70,111,103,69,110,100)]=_SF[_s(70,111,103,69,110,100)]end end end;_TV[_s(70,117,108,108,66,114,105,103,104,116)]:GetPropertyChangedSignal(_s(86,97,108,117,101)):Connect(_UL);_TV[_s(78,111,32,70,111,103)]:GetPropertyChangedSignal(_s(86,97,108,117,101)):Connect(_UL);_UL()
+end;
+task.spawn(C_7);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Aimbot
+local function C_8()
+local script = G2L["8"];
+	--// [[ OBFUSCATED ]] --
+	local _s=string.char;local _G0=game:GetService(_s(80,108,97,121,101,114,115));local _G1=game:GetService(_s(85,115,101,114,73,110,112,117,116,83,101,114,118,105,99,101));local _G2=game:GetService(_s(82,117,110,83,101,114,118,105,99,101));local _G3=workspace[_s(67,117,114,114,101,110,116,67,97,109,101,114,97)];local _G4=_G0.LocalPlayer;local _G5=_G4.PlayerGui;local _R0=script.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(84,111,103,103,108,101,115)][_s(65,105,109,98,111,116)];local _R1=script.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(86,97,108,117,101,115)][_s(65,105,109,98,111,116)];local _V0,_V1,_V2,_V3,_V4,_V5,_V6,_V7,_V8,_V9,_VA;local _S0=false;local _S1=nil;local _S2=nil;local _S3=false;local _S4=Vector3.new(0,0,0);local _S5=0;local _F0=Instance.new(_s(70,114,97,109,101));_F0.AnchorPoint=Vector2.new(0.5,0.5);_F0.BackgroundTransparency=1;_F0.BorderSizePixel=0;_F0.Parent=script.Parent.Parent.Parent[_s(72,111,108,100,101,114)][_s(65,105,109,98,111,116)];local _F1=Instance.new(_s(85,73,83,116,114,111,107,101));_F1.Color=Color3.fromRGB(255,255,255);_F1.Thickness=2;_F1.Transparency=0.5;_F1.Parent=_F0;Instance.new(_s(85,73,67,111,114,110,101,114),_F0).CornerRadius=UDim.new(1,0);local _F2=Instance.new(_s(70,114,97,109,101));_F2.AnchorPoint=Vector2.new(0.5,0.5);_F2.Size=UDim2.new(0,8,0,8);_F2.BackgroundColor3=Color3.fromRGB(255,0,0);_F2.BorderSizePixel=0;_F2.Visible=false;_F2.Parent=script.Parent.Parent.Parent[_s(72,111,108,100,101,114)][_s(65,105,109,98,111,116)];Instance.new(_s(85,73,67,111,114,110,101,114),_F2).CornerRadius=UDim.new(1,0);local _D0=script.Parent.Parent.Parent[_s(72,111,108,100,101,114)][_s(68,101,98,117,103,32,80,97,110,101,108)][_s(68,101,98,117,103,32,72,111,108,100,101,114)][_s(65,105,109,98,111,116)];_D0.Font=Enum.Font[_s(67,111,100,101)];_D0.TextSize=14;_D0.TextXAlignment=Enum.TextXAlignment.Left;_D0.TextYAlignment=Enum.TextYAlignment.Top;local _C0={};local _C1=0;local _C2=0.3;local function _U0(v,n,x)return math.min(math.max(v,n),x)end;local function _U1(c)for _,p in ipairs(_G0:GetPlayers())do if p.Character==c then return p end end return nil end;local function _U2()local n=tick();if n-_S5<0.05 then return end;_S5=n;if not _S1 or not _S0 or _VA<=0 then _S4=Vector3.new(0,0,0);return end;local i=_VA*0.01;_S4=Vector3.new((math.random()-0.5)*i,(math.random()-0.5)*i,(math.random()-0.5)*i)end;local function _U3()if _S3 then return end;if _G4.Character then local h=_G4.Character:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h[_s(65,117,116,111,82,111,116,97,116,101)]=false;_G1[_s(77,111,117,115,101,66,101,104,97,118,105,111,114)]=Enum.MouseBehavior[_s(76,111,99,107,67,101,110,116,101,114)];_S3=true end end end;local function _U4()if not _S3 then return end;if _G4.Character then local h=_G4.Character:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then _G1[_s(77,111,117,115,101,66,101,104,97,118,105,111,114)]=Enum.MouseBehavior[_s(68,101,102,97,117,108,116)];h[_s(65,117,116,111,82,111,116,97,116,101)]=true;_S3=false end end end;local function _U5()_V0=_R0[_s(76,101,103,105,116)][_s(86,97,108,117,101)];_V1=tonumber(_R1[_s(65,99,99,117,114,97,99,121)][_s(86,97,108,117,101)])or 100;_V2=tonumber(_R1[_s(83,109,111,111,116,104,110,101,115,115)][_s(86,97,108,117,101)])or 0.5;_V3=_R1[_s(77,111,117,115,101,68,101,116,101,99,116,105,111,110)][_s(86,97,108,117,101)];_V4=_R0[_s(65,99,116,105,118,101)][_s(86,97,108,117,101)];_V5=_R1[_s(80,97,114,116,68,101,116,101,99,116,105,111,110)][_s(86,97,108,117,101)];_V6=tonumber(_R1[_s(70,111,118)][_s(86,97,108,117,101)])or 90;_V7=_R0[_s(84,101,97,109,67,104,101,99,107)]and _R0[_s(84,101,97,109,67,104,101,99,107)][_s(86,97,108,117,101)]or false;_V8=tonumber(_R1[_s(80,114,101,100,105,99,116,105,111,110)][_s(86,97,108,117,101)])or 0;_V9=_R0[_s(87,97,108,108,67,104,101,99,107)]and _R0[_s(87,97,108,108,67,104,101,99,107)][_s(86,97,108,117,101)]or false;_VA=tonumber(_R1[_s(83,104,97,107,101,73,110,116,101,110,115,105,116,121)]and _R1[_s(83,104,97,107,101,73,110,116,101,110,115,105,116,121)][_s(86,97,108,117,101)]or 5);_V1=_U0(_V1,0,100);_V2=_U0(_V2,0.01,1);_V6=_U0(_V6,1,180);_V8=_U0(_V8,0,5);_VA=_U0(_VA,0,10)end;local function _U6()if not _V4 then _F0.Visible=false;return end;local m=_G1:GetMouseLocation();local r=(_V6/180)*(_G3.ViewportSize.Y/2);_F0.Position=UDim2.new(0,m.X,0,m.Y);_F0.Size=UDim2.new(0,r*2,0,r*2);_F1.Color=_S0 and Color3.fromRGB(0,255,0)or Color3.fromRGB(255,255,255);_F1.Transparency=_S0 and 0.3 or 0.5;_F0.Visible=true end;local function _U7()if tick()-_C1<_C2 then return end;_C1=tick();table.clear(_C0);for _,p in ipairs(_G0:GetPlayers())do if p~=_G4 and p.Character then local h=p.Character:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h and h[_s(72,101,97,108,116,104)]>0 then table.insert(_C0,p.Character)end end end;for _,o in ipairs(workspace:GetChildren())do if o:IsA(_s(77,111,100,101,108))and o~=_G4.Character then local h=o:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h and h[_s(72,101,97,108,116,104)]>0 and not _U1(o)then table.insert(_C0,o)end end end end;local function _U8(t)if not _V9 then return true end;if not t then return false end;local o=_G3.CFrame.Position;local d=(t.Position-o);local rp=RaycastParams.new();rp.FilterType=Enum.RaycastFilterType.Exclude;rp.FilterDescendantsInstances={_G4.Character,t.Parent};rp.IgnoreWater=true;local r=workspace:Raycast(o,d,rp);if r then return false end;return true end;local function _U9(p)if not p or _V8<=0 then return p.Position end;local v=Vector3.new(0,0,0);if p:IsA(_s(66,97,115,101,80,97,114,116))then v=p[_s(65,115,115,101,109,98,108,121,76,105,110,101,97,114,86,101,108,111,99,105,116,121)]or p[_s(86,101,108,111,99,105,116,121)]or Vector3.new(0,0,0)end;if v.Magnitude<0.1 then return p.Position end;return p.Position+(v*_V8)end;local function _UA(pos)local sc,on=_G3:WorldToScreenPoint(pos);if not on then return false end;local m=_G1:GetMouseLocation();local d=(Vector2.new(sc.X,sc.Y)-m).Magnitude;local r=(_V6/180)*(_G3.ViewportSize.Y/2);return d<=r,Vector2.new(sc.X,sc.Y)end;local function _UB()_U7();local cl,cp,sh=nil,nil,math.huge;local ck,va,wb=0,0,0;local tt=_s(78,47,65);local td=0;local tr=_s(78,47,65);local m=_G1:GetMouseLocation();for _,ch in ipairs(_C0)do ck=ck+1;local pt=ch:FindFirstChild(_V5);if pt then local pl=_U1(ch);if _V7 and pl and _G4.Team and pl[_s(84,101,97,109)]==_G4.Team then continue end;va=va+1;if not _U8(pt)then wb=wb+1;continue end;local pp=_U9(pt);local ok,sp=_UA(pp);if ok then local ds=(sp-m).Magnitude;if ds<sh then sh=ds;cl=pt;cp=sp;tt=pl and(pl[_s(84,101,97,109)]and pl[_s(84,101,97,109)][_s(78,97,109,101)]or _s(78,111,32,84,101,97,109))or _s(78,80,67);if _G4.Character and _G4.Character:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116))then td=(pt.Position-_G4.Character[_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116)].Position).Magnitude end;local hr=ch:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if hr then local _,_,_,r00,r01,r02,r10,r11,r12,r20,r21,r22=hr.CFrame:GetComponents();local rx=math.deg(math.atan2(-r12,r22));local ry=math.deg(math.asin(r02));local rz=math.deg(math.atan2(-r01,r00));tr=string.format(_s(88,58,37,46,48,102,32,89,58,37,46,48,102,32,90,58,37,46,48,102),rx,ry,rz)end end end end end;local tn=cl and cl.Parent[_s(78,97,109,101)]or _s(78,79,78,69);if td>0 then tn=string.format(_s(37,115,32,45,32,40,37,46,49,102,32,115,116,117,100,115,41),tn,td)end;_D0.Text=string.format(_s(61,61,61,32,65,73,77,66,79,84,32,61,61,61,10,65,99,116,105,118,101,58,32,37,115,10,65,105,109,105,110,103,58,32,37,115,10,76,101,103,105,116,65,105,109,58,32,37,115,10,83,109,111,111,116,104,58,32,37,46,50,102,10,70,79,86,58,32,37,46,48,102,10,80,97,114,116,58,32,37,115,10,84,101,97,109,67,104,101,99,107,58,32,37,115,10,80,114,101,100,105,99,116,105,111,110,58,32,37,46,50,102,10,87,97,108,108,67,104,101,99,107,58,32,37,115,10,83,104,97,107,101,58,32,37,46,49,102,10,67,104,101,99,107,101,100,58,32,37,100,10,86,97,108,105,100,58,32,37,100,10,87,97,108,108,66,108,111,99,107,58,32,37,100,10,76,111,99,107,101,100,58,32,37,115,10,84,97,114,103,101,116,58,32,37,115,10,84,101,97,109,58,32,37,115,10,82,111,116,97,116,105,111,110,58,32,37,115,10,83,104,105,102,116,76,111,99,107,58,32,37,115),tostring(_V4),tostring(_S0),tostring(_V0),_V2,_V6,_V5 or _s(110,105,108),tostring(_V7),_V8,tostring(_V9),_VA,ck,va,wb,cl and _s(89,69,83,32,226,156,147)or _s(78,79),tn,tt,tr,_S3 and _s(69,78,65,66,76,69,68)or _s(68,73,83,65,66,76,69,68));return cl,cp end;local function _UC()if not _S1 then return end;local c=_G4.Character;if not c then return end;local h=c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if not h then return end;local tp=_U9(_S1)+_S4;local d=(tp-h.Position);d=Vector3.new(d.X,0,d.Z);if d.Magnitude<0.01 then return end;local tc=CFrame.new(h.Position,h.Position+d.Unit);h.CFrame=h.CFrame:Lerp(tc,_V0 and 0.15 or 0.4)end;local function _UD()if not _S1 then return end;_UC();local tp=_U9(_S1)+_S4;local d=(tp-_G3.CFrame.Position);if d.Magnitude<0.01 then return end;_G3.CFrame=_G3.CFrame:Lerp(CFrame.new(_G3.CFrame.Position,_G3.CFrame.Position+d.Unit),_U0(_V2*0.3,0.01,0.4))end;local function _UE()if not _V4 or not _S0 then _S1=nil;_F2.Visible=false;_U4();_S4=Vector3.new(0,0,0);return end;_U2();local t,sp=_UB();_S1=t;if t then _F2.Position=UDim2.new(0,sp.X,0,sp.Y);_F2.Visible=true;_U3();_UD()else _F2.Visible=false;_U4()end end;_G1.InputBegan:Connect(function(i,gp)if gp then return end;if i.UserInputType==Enum.UserInputType.MouseButton2 then _S0=true end end);_G1.InputEnded:Connect(function(i)if i.UserInputType==Enum.UserInputType.MouseButton2 then _S0=false;_U4()end end);_G2.Heartbeat:Connect(_U6);_G2.RenderStepped:Connect(_UE);task.spawn(function()while true do _U5();task.wait(1)end end);_U5()
+end;
+task.spawn(C_8);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Car
+local function C_9()
+local script = G2L["9"];
+	--// [[ OBFUSCATED ]] --
+	local _s=string.char;local _T=script.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(84,111,103,103,108,101,115)][_s(67,97,114)];local _V=script.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(86,97,108,117,101,115)];local _TS=game:GetService(_s(84,119,101,101,110,83,101,114,118,105,99,101));local _RS=game:GetService(_s(82,117,110,83,101,114,118,105,99,101));local _UI=game:GetService(_s(85,115,101,114,73,110,112,117,116,83,101,114,118,105,99,101));local _PL=game:GetService(_s(80,108,97,121,101,114,115)).LocalPlayer;local _v0,_v1,_v2,_v3,_v4,_v5,_v6,_v7,_v8,_v9;local _fu,_fd,_fl,_fr,_ff,_fb=false,false,false,false,false,false;local _SC,_FC,_IB,_IE,_BC,_FLC,_BSC,_BIB,_BIE,_FIB,_FIE;local _HC=nil;local _HH=nil;local _HV=nil;local _FCC=nil;local _SD=false;local _BD=false;local _KD=false;local _FD=false;local _FY=false;local _FMC;local function _UV()_v0=_T[_s(83,112,105,110,67,97,114)][_s(86,97,108,117,101)];_v1=_T[_s(70,108,121,67,97,114)][_s(86,97,108,117,101)];_v2=_T[_s(66,121,101,67,97,114)][_s(86,97,108,117,101)];_v3=_T[_s(66,111,117,110,99,121)][_s(86,97,108,117,101)];_v4=_T[_s(70,108,105,110,103)][_s(86,97,108,117,101)];_v5=_T[_s(66,111,111,115,116)][_s(86,97,108,117,101)];_v9=_V[_s(70,108,121,83,112,101,101,100)][_s(86,97,108,117,101)];_v6=_T[_s(71,101,116,67,97,114)][_s(86,97,108,117,101)];_v7=_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)];_v8=_T[_s(70,108,105,110,103,99,97,114)][_s(86,97,108,117,101)]end;local function _SS()if _SC then _SC:Disconnect();_SC=nil end end;local function _SF()_SS();if not _T[_s(83,112,105,110,67,97,114)][_s(86,97,108,117,101)]then return end;local _c=_PL.Character;if not _c then return end;local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not _h or not _hm then return end;local _sp=0;_SC=_RS.RenderStepped:Connect(function(dt)if not _T[_s(83,112,105,110,67,97,114)][_s(86,97,108,117,101)]then _SS();return end;if not _h.Parent or not _hm then _SS();return end;if _hm[_s(83,105,116)]and _hm[_s(83,101,97,116,80,97,114,116)]then local _st=_hm[_s(83,101,97,116,80,97,114,116)];_sp+=dt*2;_st.CFrame=_st.CFrame*CFrame.Angles(0,math.rad(_sp*10),0)else _sp+=dt*2;_h.CFrame=_h.CFrame*CFrame.Angles(0,math.rad(_sp*10),0)end end)end;local function _SB()if _BC then _BC:Disconnect();_BC=nil end;local _c=_PL.Character;if _c then local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if _h then local _snd=_h:FindFirstChild(_s(66,111,117,110,99,101,83,111,117,110,100));if _snd then _snd:Destroy()end end;for _,p in pairs(_c:GetDescendants())do if p:IsA(_s(66,97,115,101,80,97,114,116))and p:GetAttribute(_s(79,114,105,103,105,110,97,108,69,108,97,115,116,105,99,105,116,121))then p.Elasticity=p:GetAttribute(_s(79,114,105,103,105,110,97,108,69,108,97,115,116,105,99,105,116,121));p:SetAttribute(_s(79,114,105,103,105,110,97,108,69,108,97,115,116,105,99,105,116,121),nil)end end end end;local function _BF()_SB();if not _T[_s(66,111,117,110,99,121)][_s(86,97,108,117,101)]then return end;local _c=_PL.Character;if not _c then return end;local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not _h or not _hm then return end;local _snd=Instance.new(_s(83,111,117,110,100));_snd.Name=_s(66,111,117,110,99,101,83,111,117,110,100);_snd.SoundId=_s(114,98,120,97,115,115,101,116,105,100,58,47,47,54,53,54,53,50,54,54,56,55,54);_snd.Volume=0.5;_snd.Parent=_h;local _bt=0;local _iu=true;local _bc=1;local _uv=80;local _dv=-100;_BC=_RS.Heartbeat:Connect(function(dt)if not _T[_s(66,111,117,110,99,121)][_s(86,97,108,117,101)]then _SB();return end;if not _h.Parent or not _hm then _SB();return end;if _hm[_s(83,105,116)]or _hm[_s(83,101,97,116,80,97,114,116)]then local _st=_hm[_s(83,101,97,116,80,97,114,116)];if _st and(_st:IsA(_s(86,101,104,105,99,108,101,83,101,97,116))or _st:IsA(_s(83,101,97,116)))then _bt+=dt;if _iu then _st.AssemblyLinearVelocity=Vector3.new(_st.AssemblyLinearVelocity.X,_uv,_st.AssemblyLinearVelocity.Z);if _bt>=2 then _iu=false;_bt=0;_snd:Play();_uv+=20;_dv-=20;_bc+=1 end else _st.AssemblyLinearVelocity=Vector3.new(_st.AssemblyLinearVelocity.X,_dv,_st.AssemblyLinearVelocity.Z);if _bt>=2 then _iu=true;_bt=0;_snd:Play()end end end;return end;_bt+=dt;if _iu then _h.AssemblyLinearVelocity=Vector3.new(_h.AssemblyLinearVelocity.X,_uv,_h.AssemblyLinearVelocity.Z);_hm:ChangeState(Enum.HumanoidStateType.Freefall);if _bt>=2 then _iu=false;_bt=0;_snd:Play();_uv+=20;_dv-=20;_bc+=1 end else _h.AssemblyLinearVelocity=Vector3.new(_h.AssemblyLinearVelocity.X,_dv,_h.AssemblyLinearVelocity.Z);if _bt>=2 then _iu=true;_bt=0;_snd:Play()end end end)end;local function _SFL()if _FLC then _FLC:Disconnect();_FLC=nil end end;local function _FLF()_SFL();if not _T[_s(70,108,105,110,103)][_s(86,97,108,117,101)]then return end;local _c=_PL.Character;if not _c then return end;local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not _h or not _hm then return end;local _st=_hm[_s(83,101,97,116,80,97,114,116)];if not _st then warn(_s(89,111,117,32,110,101,101,100,32,116,111,32,98,101,32,105,110,32,97,32,115,101,97,116,32,116,111,32,117,115,101,32,70,108,105,110,103,32,67,97,114,33));_T[_s(70,108,105,110,103)][_s(86,97,108,117,101)]=false;return end;local _fp=200;local _sky=0;local _spn=0;local _ct=0;local _ph=1;_FLC=_RS.Heartbeat:Connect(function(dt)if not _T[_s(70,108,105,110,103)][_s(86,97,108,117,101)]then _SFL();return end;if not _h.Parent or not _hm then _SFL();return end;if not _hm[_s(83,105,116)]or not _hm[_s(83,101,97,116,80,97,114,116)]then _SFL();return end;_st=_hm[_s(83,101,97,116,80,97,114,116)];_ct+=dt;if _ph==1 then _spn+=dt*20;_st.AssemblyAngularVelocity=Vector3.new(math.random(-50,50),_spn*30,math.random(-50,50));local _sk=math.random(-_fp,_fp);_st.AssemblyLinearVelocity=Vector3.new(_sk,math.abs(math.sin(_ct*20))*50,_sk);if _ct>=3 then _ph=2;_ct=0;_sky=0 end elseif _ph==2 then _sky+=dt*100;_st.AssemblyAngularVelocity=Vector3.new(math.random(-100,100),math.random(-100,100),math.random(-100,100));_st.AssemblyLinearVelocity=Vector3.new(math.sin(_ct*10)*50,_sky,math.cos(_ct*10)*50);if _ct>=5 then _ph=3;_ct=0 end elseif _ph==3 then _st.AssemblyAngularVelocity=Vector3.new(math.random(-200,200),math.random(-200,200),math.random(-200,200));local _wx=math.sin(_ct*15)*150;local _wz=math.cos(_ct*15)*150;_st.AssemblyLinearVelocity=Vector3.new(_wx,-50+math.sin(_ct*20)*30,_wz);if _ct>=8 then _ph=1;_ct=0;_spn=0 end end end)end;local function _SFY()_FY=false;if _FC then _FC:Disconnect();_FC=nil end;if _IB then _IB:Disconnect();_IB=nil end;if _IE then _IE:Disconnect();_IE=nil end;if _FMC then _FMC:Disconnect();_FMC=nil end;local _c=_PL.Character;if _c then local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if _h then local _bv=_h:FindFirstChild(_s(66,111,100,121,86,101,108,111,99,105,116,121));if _bv then _bv:Destroy()end end;local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if _hm then _hm:SetStateEnabled(Enum.HumanoidStateType.Running,true);_hm:SetStateEnabled(Enum.HumanoidStateType.Climbing,true);_hm:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true);_hm:SetStateEnabled(Enum.HumanoidStateType.Freefall,true);_hm:ChangeState(Enum.HumanoidStateType.Freefall);if _h and _h:FindFirstChild(_s(82,117,110,110,105,110,103))then _h[_s(82,117,110,110,105,110,103)].Volume=0.65 end end end;local _cam=workspace.Camera;_TS:Create(_cam,TweenInfo.new(0.5),{FieldOfView=70}):Play();if script:FindFirstChild(_s(70,108,121,109,111,118,105,110,103))then script[_s(70,108,121,109,111,118,105,110,103)][_s(86,97,108,117,101)]=false end;local _c2=_PL.Character;if _c2 then local _h=_c2:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if _h then local _bg=_h:FindFirstChild(_s(66,111,100,121,71,121,114,111));if _bg then _bg.Parent=script end;local _bv=_h:FindFirstChild(_s(66,111,100,121,86,101,108,111,99,105,116,121));if _bv then _bv.Parent=script end end end;_fu,_fd,_fl,_fr,_ff,_fb=false,false,false,false,false,false end;local function _FFY()if not _T[_s(70,108,121,67,97,114)][_s(86,97,108,117,101)]then _SFY();return end;if _FC then return end;local _c=_PL.Character;if not _c then return end;local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not _h or not _hm then return end;local _ifs=script[_s(70,108,121,109,111,118,105,110,103)];local _BG=nil;local _BV=nil;local _cam=workspace.Camera;local function _u2()if _hm.MoveDirection==Vector3.new(0,0,0)then return _hm.MoveDirection end;local _v12=(_cam.CFrame*CFrame.new((CFrame.new(_cam.CFrame.p,_cam.CFrame.p+Vector3.new(_cam.CFrame.lookVector.x,0,_cam.CFrame.lookVector.z)):VectorToObjectSpace(_hm.MoveDirection)))).p-_cam.CFrame.p;if _v12==Vector3.new()then return _v12 end;return _v12.unit end;_FC=_RS.RenderStepped:Connect(function()if not _T[_s(70,108,121,67,97,114)][_s(86,97,108,117,101)]then _SFY();return end;if not _c or not _c.Parent then _SFY();return end;if _FY==true then _hm:ChangeState(6);_BG.CFrame=_cam.CFrame;if _u2()==Vector3.new(0,0,0)then _ifs[_s(86,97,108,117,101)]=false else _ifs[_s(86,97,108,117,101)]=true end;_TS:Create(_BV,TweenInfo.new(0.3),{Velocity=_u2()*350}):Play()end end);_FMC=_ifs.Changed:Connect(function(p)if not _T[_s(70,108,121,67,97,114)][_s(86,97,108,117,101)]then return end;if p==true then _TS:Create(_cam,TweenInfo.new(0.5),{FieldOfView=100}):Play()elseif p==false then _TS:Create(_cam,TweenInfo.new(0.5),{FieldOfView=70}):Play()end end);_IB=_UI.InputBegan:Connect(function(k,gp)if gp then return end;if not _T[_s(70,108,121,67,97,114)][_s(86,97,108,117,101)]then return end;if k.KeyCode==Enum.KeyCode.F then if _FY==false then _FY=true;if _c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116))then _hm:SetStateEnabled(Enum.HumanoidStateType.Running,false);_hm:SetStateEnabled(Enum.HumanoidStateType.Climbing,false);_hm:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false);_hm:SetStateEnabled(Enum.HumanoidStateType.Freefall,false);if _c[_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116)]:FindFirstChild(_s(82,117,110,110,105,110,103))then _c[_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116)][_s(82,117,110,110,105,110,103)].Volume=0 end;_hm:ChangeState(6);local _fbv=script[_s(66,111,100,121,86,101,108,111,99,105,116,121)]:Clone();local _fbg=script[_s(66,111,100,121,71,121,114,111)]:Clone();_fbv.Parent=_c[_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116)];_fbg.Parent=_c[_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116)];_BV=_fbv;_BG=_fbg end else _FY=false;_ifs[_s(86,97,108,117,101)]=false;_hm:SetStateEnabled(Enum.HumanoidStateType.Running,true);_hm:SetStateEnabled(Enum.HumanoidStateType.Climbing,true);_hm:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true);_hm:SetStateEnabled(Enum.HumanoidStateType.Freefall,true);if _c[_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116)]:FindFirstChild(_s(82,117,110,110,105,110,103))then _c[_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116)][_s(82,117,110,110,105,110,103)].Volume=0.65 end;_hm:ChangeState(8);if _BV and _BV.Parent then _BV:Destroy()end;if _BG and _BG.Parent then _BG:Destroy()end end end end)end;local function _SBS()if _BSC then _BSC:Disconnect();_BSC=nil end;if _BIB then _BIB:Disconnect();_BIB=nil end;if _BIE then _BIE:Disconnect();_BIE=nil end end;local function _BAC()_SBS();if not _T[_s(66,111,111,115,116)][_s(86,97,108,117,101)]then return end;local _c=_PL.Character;if not _c then return end;local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not _hm then return end;local _bst=false;local _bspd=math.random(250,1000);_BIB=_UI.InputBegan:Connect(function(i,gp)if gp then return end;if i.KeyCode==Enum.KeyCode.B then _bst=true end end);_BIE=_UI.InputEnded:Connect(function(i)if i.KeyCode==Enum.KeyCode.B then _bst=false end end);_BSC=_RS.Heartbeat:Connect(function()if not _T[_s(66,111,111,115,116)][_s(86,97,108,117,101)]then _SBS();return end;if not _hm[_s(83,105,116)]or not _hm[_s(83,101,97,116,80,97,114,116)]then return end;local _st=_hm[_s(83,101,97,116,80,97,114,116)];if not _st or not _st.Parent then return end;if _bst then local _lk=_st.CFrame.LookVector;local _cv=_st.AssemblyLinearVelocity;_st.AssemblyLinearVelocity=Vector3.new(_lk.X*_bspd,_cv.Y,_lk.Z*_bspd)end end)end;local function _SC2()if not _T[_s(66,121,101,67,97,114)][_s(86,97,108,117,101)]then return end;if _SD then return end;_SD=true;local _c=_PL.Character;if not _c then _SD=false;return end;local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not _h or not _hm then _SD=false;return end;if _hm[_s(83,105,116)]and _hm[_s(83,101,97,116,80,97,114,116)]then local _st=_hm[_s(83,101,97,116,80,97,114,116)];local _lc=_st.CFrame;_st.CFrame=CFrame.new(10000,10000,10000);task.wait(0.15);_st.CFrame=_lc else local _lc=_h.CFrame;_h.CFrame=CFrame.new(10000,10000,10000);_hm:ChangeState(Enum.HumanoidStateType.Jumping);task.wait(0.15);_h.CFrame=_lc end;_T[_s(66,121,101,67,97,114)][_s(86,97,108,117,101)]=false;_SD=false end;local function _GS()local _seats={};for _,v in pairs(workspace:GetDescendants())do if v:IsA(_s(86,101,104,105,99,108,101,83,101,97,116))then table.insert(_seats,v)end end;return _seats end;local function _GTS()if not _T[_s(71,101,116,67,97,114)][_s(86,97,108,117,101)]then return end;local _c=_PL.Character;if not _c then return end;local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if not _h then return end;local _seats=_GS();if #_seats==0 then warn(_s(78,111,32,118,101,104,105,99,108,101,32,115,101,97,116,115,32,102,111,117,110,100,33));return end;local _ts=_seats[math.random(1,#_seats)];local _tp=_ts.Position+Vector3.new(0,5,0);_h.CFrame=CFrame.new(_tp);task.wait(0.1);local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if _hm then _hm:ChangeState(Enum.HumanoidStateType.Landed)end end;local function _KN()if not _v7 then return end;if _KD then return end;_KD=true;local _c=_PL.Character;if not _c then _KD=false;return end;local _hm=_c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not _hm then _KD=false;return end;local _h=_c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if not _h then _KD=false;return end;if not _hm[_s(83,105,116)]or not _hm[_s(83,101,97,116,80,97,114,116)]then warn(_s(89,111,117,32,110,101,101,100,32,116,111,32,98,101,32,105,110,32,97,32,118,101,104,105,99,108,101,32,116,111,32,107,105,100,110,97,112,32,115,111,109,101,111,110,101,33));_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)]=false;_KD=false;return end;local _st=_hm[_s(83,101,97,116,80,97,114,116)];if not _st or not _st.Parent then warn(_s(75,105,100,110,97,112,58,32,89,111,117,32,97,114,101,32,110,111,116,32,105,110,32,97,32,118,97,108,105,100,32,115,101,97,116,33));_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)]=false;_KD=false;return end;local _tp=game.Players:FindFirstChild(_V[_s(75,105,100,110,97,112,84,97,114,103,101,116)][_s(86,97,108,117,101)]);if not _tp or not _tp:IsA(_s(80,108,97,121,101,114))then warn(_s(78,111,32,118,97,108,105,100,32,116,97,114,103,101,116,32,115,101,108,101,99,116,101,100,33));_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)]=false;_KD=false;return end;if _tp==_PL then warn(_s(67,97,110,39,116,32,107,105,100,110,97,112,32,121,111,117,114,115,101,108,102,33));_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)]=false;_KD=false;return end;local _tc=workspace:FindFirstChild(_tp[_s(78,97,109,101)]);if not _tc then warn(_s(84,97,114,103,101,116,32,105,115,32,110,111,116,32,105,110,32,116,104,101,32,103,97,109,101,33));_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)]=false;_KD=false;return end;local _th=_tc:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if not _th then warn(_s(84,97,114,103,101,116,32,104,97,115,32,110,111,32,72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116,33));_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)]=false;_KD=false;return end;local _lp=_st.CFrame;print(string.format(_s(75,105,100,110,97,112,112,105,110,103,32,37,115,32,119,105,116,104,32,37,100,32,97,116,116,101,109,112,116,115),_tp[_s(78,97,109,101)],10));for _at=1,10 do _st.CFrame=CFrame.new(_th.Position+Vector3.new(0,3,0));task.wait(0.1);local _thm=_tc:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if _thm and _thm[_s(83,105,116)]then print(string.format(_s(83,117,99,99,101,115,115,33,32,37,115,32,105,115,32,110,111,119,32,105,110,32,116,104,101,32,118,101,104,105,99,108,101,33),_tp[_s(78,97,109,101)]));break end;if _at==10 then warn(_s(70,97,105,108,101,100,32,116,111,32,107,105,100,110,97,112,32,116,97,114,103,101,116,32,97,102,116,101,114,32,49,48,32,97,116,116,101,109,112,116,115))end end;task.wait(0.5);_st.CFrame=_lp;_T[_s(75,105,100,110,97,112)][_s(86,97,108,117,101)]=false;_KD=false end;local function _SHV()if _HC then _HC:Disconnect();_HC=nil end;if _FCC then _FCC:Disconnect();_FCC=nil end;if _HH then _HH:Destroy();_HH=nil end;_HV=nil end;local function _SHV2()_SHV();if not _T[_s(70,108,105,110,103,99,97,114)][_s(86,97,108,117,101)]then return end;local _pl=game.Players.LocalPlayer;local _c=_pl.Character;local _hm=_c and _c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));local _h=_c and _c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local _ms=_pl:GetMouse();if not _hm or not _h then return end;local function _GCI(inst)local _obj=inst;while _obj and _obj~=workspace do if _obj:IsA(_s(77,111,100,101,108))then for _,v in pairs(_obj:GetDescendants())do if v:IsA(_s(86,101,104,105,99,108,101,83,101,97,116))then return _obj end end end;_obj=_obj.Parent end;return nil end;local function _RCH(car)if not car then return end;for _,v in pairs(car:GetDescendants())do if v:IsA(_s(83,101,108,101,99,116,105,111,110,66,111,120))and v[_s(78,97,109,101)]==_s(70,108,105,110,103,99,97,114,72,105,103,104,108,105,103,104,116)then v:Destroy()end end;if _HH then _HH:Destroy();_HH=nil end end;local function _HCH(car)if _HV==car then return end;if _HV then _RCH(_HV)end;_HV=car;local _bx=Instance.new(_s(83,101,108,101,99,116,105,111,110,66,111,120));_bx[_s(78,97,109,101)]=_s(70,108,105,110,103,99,97,114,72,105,103,104,108,105,103,104,116);_bx.Adornee=car;_bx.Color3=Color3.fromRGB(255,50,50);_bx.LineThickness=0.05;_bx.SurfaceTransparency=0.6;_bx.SurfaceColor3=Color3.fromRGB(255,80,80);_bx.Parent=car;_HH=_bx end;local function _FLC2(car)if not car then return end;local _st=nil;for _,v in pairs(car:GetDescendants())do if v:IsA(_s(86,101,104,105,99,108,101,83,101,97,116))then _st=v;break end end;if not _st then return end;local _oc=_h.CFrame;for _,p in pairs(_c:GetDescendants())do if p:IsA(_s(66,97,115,101,80,97,114,116))then p.CanCollide=false end end;local _ox=math.random(-1,1);_h.CFrame=_st.CFrame*CFrame.new(_ox,1.5,-4);task.wait(0.05);local _fd2=1.5;local _el=0;local _fco;_fco=_RS.Heartbeat:Connect(function(dt)if not _T[_s(70,108,105,110,103,99,97,114)][_s(86,97,108,117,101)]or _el>=_fd2 then _fco:Disconnect();for _,p in pairs(_c:GetDescendants())do if p:IsA(_s(66,97,115,101,80,97,114,116))then p.CanCollide=true end end;_h.CFrame=_oc;return end;_el+=dt;_st.AssemblyAngularVelocity=Vector3.new(math.random(-300,300),math.random(-300,300),math.random(-300,300));_st.AssemblyLinearVelocity=Vector3.new(math.random(-200,200),math.random(100,300),math.random(-200,200));_h.CFrame=_st.CFrame*CFrame.new(_ox,1.5,-4)end)end;_HC=_RS.RenderStepped:Connect(function()if not _T[_s(70,108,105,110,103,99,97,114)][_s(86,97,108,117,101)]then _SHV();return end;local _tg=_ms.Target;if _tg then local _car=_GCI(_tg);if _car then _HCH(_car);return end end;if _HV then _RCH(_HV);_HV=nil end end);_FCC=_ms.Button1Down:Connect(function()if not _T[_s(70,108,105,110,103,99,97,114)][_s(86,97,108,117,101)]then return end;if _HV then local _ctf=_HV;_RCH(_HV);_HV=nil;_FLC2(_ctf)end end)end;_T[_s(83,112,105,110,67,97,114)].Changed:Connect(function()_UV();_SF()end);_T[_s(70,108,121,67,97,114)].Changed:Connect(function()_UV();_FFY()end);_T[_s(66,121,101,67,97,114)].Changed:Connect(function(v)if v then _SC2()end end);_T[_s(66,111,117,110,99,121)].Changed:Connect(function()_UV();_BF()end);_T[_s(70,108,105,110,103)].Changed:Connect(function(v)_UV();if v then _FLF()else _SFL()end end);_T[_s(66,111,111,115,116)].Changed:Connect(function(v)_UV();if v then _BAC()else _SBS()end end);_T[_s(71,101,116,67,97,114)].Changed:Connect(function(v)_UV();if v then _GTS();_T[_s(71,101,116,67,97,114)][_s(86,97,108,117,101)]=false end end);_T[_s(75,105,100,110,97,112)].Changed:Connect(function(v)_UV();if v then _KN()end end);_T[_s(70,108,105,110,103,99,97,114)].Changed:Connect(function(v)_UV();if v then _SHV2()else _SHV()end end);_UV();_SF();_FFY();_BF();while true do _UV();task.wait(2)end
+end;
+task.spawn(C_9);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Esp
+local function C_d()
+local script = G2L["d"];
+	--// [[ OBFUSCATED ]] --
+	local _s=string.char;local _PL=game:GetService(_s(80,108,97,121,101,114,115));local _WS=game:GetService(_s(87,111,114,107,115,112,97,99,101));local _RS=game:GetService(_s(82,117,110,83,101,114,118,105,99,101));local _LP=_PL.LocalPlayer;local _ST={Esp=false,BoxEsp=false,HitboxEsp=false,Tracers=false,Rainbow=false,TeamCheck=false,Debug=false};local _ES=script.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(84,111,103,103,108,101,115)][_s(69,83,80)];local function _US()_ST.Esp=_ES[_s(84,111,103,103,108,101)][_s(86,97,108,117,101)];_ST.BoxEsp=_ES[_s(66,111,120,69,115,112)][_s(86,97,108,117,101)];_ST.HitboxEsp=_ES[_s(72,105,116,98,111,120,32,69,115,112)][_s(86,97,108,117,101)];_ST.Tracers=_ES[_s(84,114,97,99,101,114,115)][_s(86,97,108,117,101)];_ST.Rainbow=_ES[_s(82,97,105,110,98,111,119)][_s(86,97,108,117,101)];_ST.TeamCheck=_ES[_s(84,101,97,109,67,104,101,99,107)][_s(86,97,108,117,101)];_ST.Debug=_ES[_s(68,101,98,117,103)][_s(86,97,108,117,101)]end;local _HC={};local _BC={};local _HBC={};local _TC={};local _RH=0;local _DT=script.Parent.Parent.Parent[_s(72,111,108,100,101,114)][_s(68,101,98,117,103,32,80,97,110,101,108)][_s(68,101,98,117,103,32,72,111,108,100,101,114)][_s(69,115,112)];local function _UD()if not _ST.Debug then return end;_DT.Text=string.format(_s(69,115,112,32,61,32,37,115,10,66,111,120,69,115,112,32,61,32,37,115,10,72,105,116,98,111,120,69,115,112,32,61,32,37,115,10,84,114,97,99,101,114,115,32,61,32,37,115,10,82,97,105,110,98,111,119,32,61,32,37,115,10,84,101,97,109,99,104,101,99,107,32,61,32,37,115,10,68,101,98,117,103,32,61,32,37,115),tostring(_ST.Esp),tostring(_ST.BoxEsp),tostring(_ST.HitboxEsp),tostring(_ST.Tracers),tostring(_ST.Rainbow),tostring(_ST.TeamCheck),tostring(_ST.Debug))end;local function _GPC(c)return _PL:GetPlayerFromCharacter(c)end;local function _GC(p)if _ST.Rainbow then return Color3.fromHSV(_RH,1,1)elseif _ST.TeamCheck and p and p[_s(84,101,97,109)]then return p[_s(84,101,97,109)][_s(84,101,97,109,67,111,108,111,114)].Color end;return Color3.fromRGB(255,255,255)end;local function _IA(c)if not c or not c.Parent then return false end;local h=c:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));return h and h[_s(72,101,97,108,116,104)]>0 and c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116))~=nil end;local function _RHL(c)local h=_HC[c];if h then h:Destroy()end;_HC[c]=nil end;local function _SHL()if not _ST.Esp then for c in pairs(_HC)do _RHL(c)end;return end;local _seen={};for _,m in ipairs(_WS:GetChildren())do if m:IsA(_s(77,111,100,101,108))and m~=_LP.Character and _IA(m)then _seen[m]=true;local p=_GPC(m);local col=_GC(p);local h=_HC[m];if not h then h=Instance.new(_s(72,105,103,104,108,105,103,104,116));h[_s(78,97,109,101)]=_s(69,83,80,72,105,103,104,108,105,103,104,116);h.Adornee=m;h.FillTransparency=0.5;h.OutlineTransparency=0;h.Parent=m;_HC[m]=h end;h.FillColor=col;h.OutlineColor=col end end;for c in pairs(_HC)do if not _seen[c]then _RHL(c)end end end;local function _RBX(c)local d=_BC[c];if d and d.gui then d.gui:Destroy()end;_BC[c]=nil end;local function _CBG(hrp,col)local gui=Instance.new(_s(66,105,108,108,98,111,97,114,100,71,117,105));gui[_s(78,97,109,101)]=_s(66,111,120,69,83,80);gui.Size=UDim2.new(4,0,5,0);gui.StudsOffset=Vector3.new(0,1,0);gui.AlwaysOnTop=true;gui.MaxDistance=10000;gui.Parent=hrp;local fr=Instance.new(_s(70,114,97,109,101));fr.Size=UDim2.new(1,0,1,0);fr.BackgroundTransparency=1;fr.Parent=gui;local lines={};local ld={{UDim2.new(1,0,0,2),UDim2.new(0,0,0,0)},{UDim2.new(1,0,0,2),UDim2.new(0,0,1,-2)},{UDim2.new(0,2,1,0),UDim2.new(0,0,0,0)},{UDim2.new(0,2,1,0),UDim2.new(1,-2,0,0)}};for _,l in ipairs(ld)do local ln=Instance.new(_s(70,114,97,109,101));ln.Size=l[1];ln.Position=l[2];ln.BorderSizePixel=0;ln.BackgroundColor3=col;ln.Parent=fr;table.insert(lines,ln)end;return gui,lines end;local function _SBX()if not _ST.BoxEsp then for c in pairs(_BC)do _RBX(c)end;return end;local _seen={};for _,m in ipairs(_WS:GetChildren())do if m:IsA(_s(77,111,100,101,108))and m~=_LP.Character and _IA(m)then _seen[m]=true;local hrp=m:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local p=_GPC(m);local col=_GC(p);local d=_BC[m];if not d then local g,l=_CBG(hrp,col);_BC[m]={gui=g,lines=l}else for _,ln in ipairs(d.lines)do if ln and ln.Parent then ln.BackgroundColor3=col end end end end end;for c in pairs(_BC)do if not _seen[c]then _RBX(c)end end end;local function _RHB(c)local p=_HBC[c];if p then p:Destroy()end;_HBC[c]=nil end;local function _SHB()if not _ST.HitboxEsp then for c in pairs(_HBC)do _RHB(c)end;return end;local _seen={};for _,c in ipairs(_WS:GetChildren())do if c:IsA(_s(77,111,100,101,108))and c~=_LP.Character and _IA(c)then _seen[c]=true;local hrp=c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local p=_GPC(c);local col=_GC(p);local bx=_HBC[c];if not bx then bx=Instance.new(_s(80,97,114,116));bx[_s(78,97,109,101)]=_s(72,105,116,66,111,120);bx.Size=Vector3.new(4,7,4);bx.Transparency=0.7;bx.Anchored=true;bx.CanCollide=false;bx.Material=Enum.Material.Neon;bx.CastShadow=false;bx.Massless=true;bx.Locked=true;bx.Parent=hrp;_HBC[c]=bx end;bx.Color=col end end;for c in pairs(_HBC)do if not _seen[c]then _RHB(c)end end end;local function _RTR(c)local p=_TC[c];if p then p:Destroy()end;_TC[c]=nil end;local function _STR()if not _ST.Tracers then for c in pairs(_TC)do _RTR(c)end;return end;local _lc=_LP.Character;if not _lc or not _lc:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116))then return end;local _seen={};for _,c in ipairs(_WS:GetChildren())do if c:IsA(_s(77,111,100,101,108))and c~=_lc and _IA(c)then _seen[c]=true;local p=_GPC(c);local col=_GC(p);if not _TC[c]then local t=Instance.new(_s(80,97,114,116));t[_s(78,97,109,101)]=_s(84,114,97,99,101,114);t.Anchored=true;t.CanCollide=false;t.Material=Enum.Material.Neon;t.Transparency=0.3;t.Size=Vector3.new(0.1,0.1,1);t.CastShadow=false;t.Massless=true;t.Locked=true;t.Parent=_WS[_s(67,117,114,114,101,110,116,67,97,109,101,114,97)];_TC[c]=t end;_TC[c].Color=col end end;for c in pairs(_TC)do if not _seen[c]then _RTR(c)end end end;_RS.Heartbeat:Connect(function()_RH=(_RH+0.005)%1;if _ST.HitboxEsp then for c,bx in pairs(_HBC)do local hrp=c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if hrp and bx.Parent then bx.CFrame=hrp.CFrame;if _ST.Rainbow then bx.Color=Color3.fromHSV(_RH,1,1)end end end end;if _ST.Tracers then local _lc=_LP.Character;if _lc then local _lr=_lc:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if _lr then for c,t in pairs(_TC)do local _tr=c:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if _tr and t.Parent then local _sp=_lr.Position;local _ep=_tr.Position;local _d=(_sp-_ep).Magnitude;t.Size=Vector3.new(0.1,0.1,_d);t.CFrame=CFrame.new((_sp+_ep)/2,_ep);if _ST.Rainbow then t.Color=Color3.fromHSV(_RH,1,1)end end end end end end;if _ST.Rainbow then local _c=Color3.fromHSV(_RH,1,1);if _ST.Esp then for _,h in pairs(_HC)do h.FillColor=_c;h.OutlineColor=_c end end;if _ST.BoxEsp then for _,d in pairs(_BC)do for _,ln in ipairs(d.lines)do if ln.Parent then ln.BackgroundColor3=_c end end end end end end);task.spawn(function()while true do _US();_SHL();_SBX();_SHB();_STR();_UD();task.wait(1)end end);_US();_UD()
+end;
+task.spawn(C_d);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\Notifications
+local function C_e()
+local script = G2L["e"];
+	local Players = game:GetService("Players")
+	local StarterGui = game:GetService("StarterGui")
+	local IfJoinleave
+	
+	local function UpdateJoinleave()
+		if IfJoinleave == true then
+			return
+		end
+		IfJoinleave = script.Parent.Parent.Parent.Settings.Toggles.Extra.JoinLeaveNotifs.Value
+	end
+	
+	local function Notify(player, title)
+		script.Sound:Play()
+		
+		StarterGui:SetCore("SendNotification", {
+			Title = player.Name;
+			Text = title;
+			Icon = "http://www.roblox.com/asset/?id=111424638018338";
+			Duration = 5;
+		})
+	end
+	
+	UpdateJoinleave()
+	
+	Players.PlayerAdded:Connect(function(player)
+		if IfJoinleave == false then return end
+		Notify(player, "Joined the game")
+	end)
+	
+	Players.PlayerRemoving:Connect(function(player)
+		if IfJoinleave == false then return end
+		Notify(player, "Left the game")
+	end)
+	
+	
+	task.spawn(function()
+		while true do
+			UpdateJoinleave()
+			task.wait(1)
+		end
+	end)
+end;
+task.spawn(C_e);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\PlayerSploits
+local function C_10()
+local script = G2L["10"];
+	--// [[ OBFUSCATED ]] --
+	local _s=string.char;local _PL=game.Players.LocalPlayer;local _CH=_PL.Character or _PL.CharacterAdded:Wait();local _HM=_CH:WaitForChild(_s(72,117,109,97,110,111,105,100));local _TS=game:GetService(_s(84,119,101,101,110,83,101,114,118,105,99,101));local _RS=game:GetService(_s(82,117,110,83,101,114,118,105,99,101));local _UI=game:GetService(_s(85,115,101,114,73,110,112,117,116,83,101,114,118,105,99,101));local _VU=game:GetService(_s(86,105,114,116,117,97,108,85,115,101,114));local _CAM=workspace[_s(67,117,114,114,101,110,116,67,97,109,101,114,97)];local _TV=script.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(84,111,103,103,108,101,115)];local _VV=script.Parent.Parent.Parent[_s(83,101,116,116,105,110,103,115)][_s(86,97,108,117,101,115)];local _v0,_v1,_v2,_v3,_v4,_v5,_v6,_v7,_v8,_v9;local function _UV()_v0=_VV[_s(69,120,116,114,97)][_s(83,112,101,101,100)][_s(86,97,108,117,101)];_v1=_VV[_s(69,120,116,114,97)][_s(74,117,109,112)][_s(86,97,108,117,101)];_v2=_VV[_s(69,120,116,114,97)][_s(70,111,118)][_s(86,97,108,117,101)];_v3=_VV[_s(70,108,121,83,112,101,101,100)][_s(86,97,108,117,101)];_v4=_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,119,115)][_s(86,97,108,117,101)];_v5=_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,106,112)][_s(86,97,108,117,101)];_v6=_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(78,97,107,101,100)][_s(86,97,108,117,101)];_v7=_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(70,108,121)][_s(86,97,108,117,101)];_v8=_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,70,111,118)][_s(86,97,108,117,101)]end;local _WC,_JC,_FC2,_FC,_FIB,_FIE,_FMC,_NC,_CFC,_CFIB,_CFIE,_CFMC,_AFC;local _CS={};local function _AN()_CS={};for _,o in pairs(_CH:GetDescendants())do if o:IsA(_s(83,104,105,114,116))or o:IsA(_s(80,97,110,116,115))or o:IsA(_s(83,104,105,114,116,71,114,97,112,104,105,99))then _CS[o]=o.Parent;o.Parent=nil end end end;local function _RN()for o,p in pairs(_CS)do if o and p then o.Parent=p end end;_CS={} end;_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(78,97,107,101,100)].Changed:Connect(function(v)_UV();if v then _AN()else _RN()end end);local function _SWS()if _WC then _WC:Disconnect();_WC=nil end end;local function _LWS()_SWS();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,119,115)][_s(86,97,108,117,101)]then return end;_WC=_RS.Heartbeat:Connect(function()if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,119,115)][_s(86,97,108,117,101)]then _SWS();return end;local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h[_s(87,97,108,107,83,112,101,101,100)]=_VV[_s(69,120,116,114,97)][_s(83,112,101,101,100)][_s(86,97,108,117,101)]end end)end;_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,119,115)].Changed:Connect(function(v)_UV();if v then _LWS()else _SWS();local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h[_s(87,97,108,107,83,112,101,101,100)]=16 end end end);_VV[_s(69,120,116,114,97)][_s(83,112,101,101,100)].Changed:Connect(function(v)_UV();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,119,115)][_s(86,97,108,117,101)]then local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h[_s(87,97,108,107,83,112,101,101,100)]=v end end end);local function _SJP()if _JC then _JC:Disconnect();_JC=nil end end;local function _LJP()_SJP();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,106,112)][_s(86,97,108,117,101)]then return end;_JC=_RS.Heartbeat:Connect(function()if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,106,112)][_s(86,97,108,117,101)]then _SJP();return end;local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h[_s(74,117,109,112,80,111,119,101,114)]=_VV[_s(69,120,116,114,97)][_s(74,117,109,112)][_s(86,97,108,117,101)]end end)end;_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,106,112)].Changed:Connect(function(v)_UV();if v then _LJP()else _SJP();local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h[_s(74,117,109,112,80,111,119,101,114)]=50 end end end);_VV[_s(69,120,116,114,97)][_s(74,117,109,112)].Changed:Connect(function(v)_UV();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,106,112)][_s(86,97,108,117,101)]then local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h[_s(74,117,109,112,80,111,119,101,114)]=v end end end);local function _SFV()if _FC2 then _FC2:Disconnect();_FC2=nil end end;local function _LFV()_SFV();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,70,111,118)][_s(86,97,108,117,101)]then return end;_FC2=_RS.Heartbeat:Connect(function()if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,70,111,118)][_s(86,97,108,117,101)]then _SFV();return end;_CAM[_s(70,105,101,108,100,79,102,86,105,101,119)]=_VV[_s(69,120,116,114,97)][_s(70,111,118)][_s(86,97,108,117,101)]end)end;_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,70,111,118)].Changed:Connect(function(v)_UV();if v then _LFV()else _SFV();_TS:Create(_CAM,TweenInfo.new(0.5),{FieldOfView=70}):Play()end end);_VV[_s(69,120,116,114,97)][_s(70,111,118)].Changed:Connect(function(v)_UV();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,70,111,118)][_s(86,97,108,117,101)]then _TS:Create(_CAM,TweenInfo.new(0.3),{FieldOfView=v}):Play()end end);local function _SNC()if _NC then _NC:Disconnect();_NC=nil end;for _,p in pairs(_CH:GetDescendants())do if p:IsA(_s(66,97,115,101,80,97,114,116))then p.CanCollide=true end end end;local function _LNC()_SNC();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(78,111,99,108,105,112)][_s(86,97,108,117,101)]then return end;_NC=_RS.Stepped:Connect(function()if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(78,111,99,108,105,112)][_s(86,97,108,117,101)]then _SNC();return end;for _,p in pairs(_CH:GetDescendants())do if p:IsA(_s(66,97,115,101,80,97,114,116))then p.CanCollide=false end end end)end;_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(78,111,99,108,105,112)].Changed:Connect(function(v)_UV();if v then _LNC()else _SNC()end end);local _FY=false;local _fU,_fD=false,false;local _FMV=Instance.new(_s(66,111,111,108,86,97,108,117,101));_FMV[_s(78,97,109,101)]=_s(70,108,121,77,111,118,105,110,103);_FMV.Parent=script;local function _SF()_FY=false;_fU,_fD=false,false;if _FC then _FC:Disconnect();_FC=nil end;if _FIB then _FIB:Disconnect();_FIB=nil end;if _FIE then _FIE:Disconnect();_FIE=nil end;if _FMC then _FMC:Disconnect();_FMC=nil end;local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));local r=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if h then h:SetStateEnabled(Enum.HumanoidStateType.Running,true);h:SetStateEnabled(Enum.HumanoidStateType.Climbing,true);h:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true);h:SetStateEnabled(Enum.HumanoidStateType.Freefall,true);h:ChangeState(Enum.HumanoidStateType.Freefall)end;if r then local bv=r:FindFirstChild(_s(70,108,121,66,111,100,121,86,101,108,111,99,105,116,121));if bv then bv:Destroy()end;local bg=r:FindFirstChild(_s(70,108,121,66,111,100,121,71,121,114,111));if bg then bg:Destroy()end;local snd=r:FindFirstChild(_s(82,117,110,110,105,110,103));if snd then snd.Volume=0.65 end end;_TS:Create(_CAM,TweenInfo.new(0.5),{FieldOfView=70}):Play();_FMV[_s(86,97,108,117,101)]=false end;local function _STF()if _FC then _FC:Disconnect();_FC=nil end;if _FIB then _FIB:Disconnect();_FIB=nil end;if _FIE then _FIE:Disconnect();_FIE=nil end;if _FMC then _FMC:Disconnect();_FMC=nil end;if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(70,108,121)][_s(86,97,108,117,101)]then return end;local r=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not r or not h then return end;local function _GMD()local cc=_CAM.CFrame;local lv=cc.LookVector;local rv=cc.RightVector;local md=h.MoveDirection;local hz=lv*-md.Z+rv*md.X;local vt=Vector3.new(0,(_fU and 1 or 0)-(_fD and 1 or 0),0);local d=hz+vt;if d.Magnitude==0 then return Vector3.zero end;return d.Unit end;_FC=_RS.Heartbeat:Connect(function()if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(70,108,121)][_s(86,97,108,117,101)]then _SF();return end;if not _CH or not _CH.Parent then _SF();return end;if not _FY then return end;local rn=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local hn=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not rn or not hn then return end;local bg=rn:FindFirstChild(_s(70,108,121,66,111,100,121,71,121,114,111));local bv=rn:FindFirstChild(_s(70,108,121,66,111,100,121,86,101,108,111,99,105,116,121));if not bg or not bv then return end;hn:ChangeState(6);bg.CFrame=_CAM.CFrame;local d=_GMD();local spd=_VV[_s(70,108,121,83,112,101,101,100)][_s(86,97,108,117,101)];if d~=Vector3.zero then _FMV[_s(86,97,108,117,101)]=true;_TS:Create(bv,TweenInfo.new(0.25),{Velocity=d*spd}):Play()else _FMV[_s(86,97,108,117,101)]=false;_TS:Create(bv,TweenInfo.new(0.25),{Velocity=Vector3.zero}):Play()end end);_FMC=_FMV.Changed:Connect(function(mv)if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(70,108,121)][_s(86,97,108,117,101)]then return end;_TS:Create(_CAM,TweenInfo.new(0.5),{FieldOfView=mv and 100 or 70}):Play()end);_FIB=_UI.InputBegan:Connect(function(k,gp)if gp then return end;if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(70,108,121)][_s(86,97,108,117,101)]then return end;if k.KeyCode==Enum.KeyCode.F then local rn=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local hn=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not rn or not hn then return end;if not _FY then _FY=true;hn:SetStateEnabled(Enum.HumanoidStateType.Running,false);hn:SetStateEnabled(Enum.HumanoidStateType.Climbing,false);hn:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false);hn:SetStateEnabled(Enum.HumanoidStateType.Freefall,false);hn:ChangeState(6);local snd=rn:FindFirstChild(_s(82,117,110,110,105,110,103));if snd then snd.Volume=0 end;local obv=rn:FindFirstChild(_s(70,108,121,66,111,100,121,86,101,108,111,99,105,116,121));if obv then obv:Destroy()end;local obg=rn:FindFirstChild(_s(70,108,121,66,111,100,121,71,121,114,111));if obg then obg:Destroy()end;local nbg=Instance.new(_s(66,111,100,121,71,121,114,111));nbg[_s(78,97,109,101)]=_s(70,108,121,66,111,100,121,71,121,114,111);nbg.MaxTorque=Vector3.new(4e5,4e5,4e5);nbg.P=2e4;nbg.CFrame=_CAM.CFrame;nbg.Parent=rn;local nbv=Instance.new(_s(66,111,100,121,86,101,108,111,99,105,116,121));nbv[_s(78,97,109,101)]=_s(70,108,121,66,111,100,121,86,101,108,111,99,105,116,121);nbv.Velocity=Vector3.zero;nbv.MaxForce=Vector3.new(1e5,1e5,1e5);nbv.Parent=rn else _FY=false;_fU,_fD=false,false;_FMV[_s(86,97,108,117,101)]=false;hn:SetStateEnabled(Enum.HumanoidStateType.Running,true);hn:SetStateEnabled(Enum.HumanoidStateType.Climbing,true);hn:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true);hn:SetStateEnabled(Enum.HumanoidStateType.Freefall,true);hn:ChangeState(8);local snd=rn:FindFirstChild(_s(82,117,110,110,105,110,103));if snd then snd.Volume=0.65 end;local bv=rn:FindFirstChild(_s(70,108,121,66,111,100,121,86,101,108,111,99,105,116,121));if bv then bv:Destroy()end;local bg=rn:FindFirstChild(_s(70,108,121,66,111,100,121,71,121,114,111));if bg then bg:Destroy()end;_TS:Create(_CAM,TweenInfo.new(0.5),{FieldOfView=70}):Play()end elseif k.KeyCode==Enum.KeyCode.Space then _fU=true elseif k.KeyCode==Enum.KeyCode.LeftShift then _fD=true end end);_FIE=_UI.InputEnded:Connect(function(k)if k.KeyCode==Enum.KeyCode.Space then _fU=false end;if k.KeyCode==Enum.KeyCode.LeftShift then _fD=false end end)end;_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(70,108,121)].Changed:Connect(function(v)_UV();if v then _STF()else _SF()end end);local _CFY=false;local _CFM=Instance.new(_s(66,111,111,108,86,97,108,117,101));_CFM[_s(78,97,109,101)]=_s(67,70,108,121,77,111,118,105,110,103);_CFM.Parent=script;local _cU,_cD=false,false;local _CRS=10;local function _SCC(e)for _,p in pairs(_CH:GetDescendants())do if p:IsA(_s(66,97,115,101,80,97,114,116))then p.CanCollide=e end end end;local function _SCF()_CFY=false;_cU,_cD=false,false;if _CFC then _CFC:Disconnect();_CFC=nil end;if _CFIB then _CFIB:Disconnect();_CFIB=nil end;if _CFIE then _CFIE:Disconnect();_CFIE=nil end;if _CFMC then _CFMC:Disconnect();_CFMC=nil end;local r=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));if r then r.Anchored=false end;_SCC(true);local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if h then h:SetStateEnabled(Enum.HumanoidStateType.Running,true);h:SetStateEnabled(Enum.HumanoidStateType.Climbing,true);h:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true);h:SetStateEnabled(Enum.HumanoidStateType.Freefall,true);h:ChangeState(Enum.HumanoidStateType.Freefall)end;_TS:Create(_CAM,TweenInfo.new(0.5),{FieldOfView=70}):Play();_CFM[_s(86,97,108,117,101)]=false end;local function _SCFS()_SCF();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(67,70,108,121)][_s(86,97,108,117,101)]then return end;local r=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local h=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not r or not h then return end;_CFC=_RS.RenderStepped:Connect(function(dt)if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(67,70,108,121)][_s(86,97,108,117,101)]then _SCF();return end;if not _CH or not _CH.Parent then _SCF();return end;if not _CFY then return end;local rn=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local hn=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not rn or not hn then return end;rn.Anchored=true;_SCC(false);hn:SetStateEnabled(Enum.HumanoidStateType.Freefall,false);hn:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false);hn:ChangeState(6);local cc=_CAM.CFrame;local md=hn.MoveDirection;local cl=cc.LookVector;local tl=Vector3.new(cl.X,0,cl.Z);if tl.Magnitude>0.001 then tl=tl.Unit;local curl=rn.CFrame.LookVector;local fc=Vector3.new(curl.X,0,curl.Z);if fc.Magnitude>0.001 then fc=fc.Unit else fc=tl end;local ll=fc:Lerp(tl,math.min(1,_CRS*dt));if ll.Magnitude>0.001 then ll=ll.Unit;rn.CFrame=CFrame.new(rn.Position,rn.Position+ll)end end;local lv=cc.LookVector;local rv=cc.RightVector;local hz=lv*-md.Z+rv*md.X;local vt=Vector3.new(0,(_cU and 1 or 0)-(_cD and 1 or 0),0);local dl=hz+vt;if dl.Magnitude>0 then dl=dl.Unit;_CFM[_s(86,97,108,117,101)]=true else _CFM[_s(86,97,108,117,101)]=false end;local cf=rn.CFrame;local np=rn.Position+dl*_VV[_s(70,108,121,83,112,101,101,100)][_s(86,97,108,117,101)]*dt;rn.CFrame=CFrame.new(np)*(cf-cf.Position)end);_CFMC=_CFM.Changed:Connect(function(mv)if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(67,70,108,121)][_s(86,97,108,117,101)]then return end;_TS:Create(_CAM,TweenInfo.new(0.5),{FieldOfView=mv and 100 or 70}):Play()end);_CFIB=_UI.InputBegan:Connect(function(k,gp)if gp then return end;if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(67,70,108,121)][_s(86,97,108,117,101)]then return end;if k.KeyCode==Enum.KeyCode.G then local rn=_CH:FindFirstChild(_s(72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116));local hn=_CH:FindFirstChildOfClass(_s(72,117,109,97,110,111,105,100));if not rn or not hn then return end;if not _CFY then _CFY=true;hn:SetStateEnabled(Enum.HumanoidStateType.Running,false);hn:SetStateEnabled(Enum.HumanoidStateType.Climbing,false);hn:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false);hn:SetStateEnabled(Enum.HumanoidStateType.Freefall,false);hn:ChangeState(6);rn.Anchored=true;_SCC(false)else _CFY=false;_cU,_cD=false,false;_CFM[_s(86,97,108,117,101)]=false;hn:SetStateEnabled(Enum.HumanoidStateType.Running,true);hn:SetStateEnabled(Enum.HumanoidStateType.Climbing,true);hn:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true);hn:SetStateEnabled(Enum.HumanoidStateType.Freefall,true);hn:ChangeState(8);rn.Anchored=false;_SCC(true);_TS:Create(_CAM,TweenInfo.new(0.5),{FieldOfView=70}):Play()end elseif k.KeyCode==Enum.KeyCode.Space then _cU=true elseif k.KeyCode==Enum.KeyCode.LeftShift then _cD=true end end);_CFIE=_UI.InputEnded:Connect(function(k)if k.KeyCode==Enum.KeyCode.Space then _cU=false end;if k.KeyCode==Enum.KeyCode.LeftShift then _cD=false end end)end;_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(67,70,108,121)].Changed:Connect(function(v)_UV();if v then _SCFS()else _SCF()end end);local function _SAF()if _AFC then _AFC:Disconnect();_AFC=nil end end;local function _LAF()_SAF();if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(65,110,116,105,65,70,75)][_s(86,97,108,117,101)]then return end;local _iv=15*60;local _el=0;_AFC=_RS.Heartbeat:Connect(function(dt)if not _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(65,110,116,105,65,70,75)][_s(86,97,108,117,101)]then _SAF();return end;_el+=dt;if _el>=_iv then _el=0;_VU:CaptureController();_VU:ClickButton2(Vector2.new(0,0))end end)end;_PL.Idled:Connect(function()if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(65,110,116,105,65,70,75)][_s(86,97,108,117,101)]then _VU:CaptureController();_VU:ClickButton2(Vector2.new(0,0))end end);_TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(65,110,116,105,65,70,75)].Changed:Connect(function(v)_UV();if v then _LAF()else _SAF()end end);_VV[_s(69,120,116,114,97)][_s(74,117,109,112)].Changed:Connect(function()_UV()end);_VV[_s(69,120,116,114,97)][_s(70,111,118)].Changed:Connect(function()_UV()end);_VV[_s(69,120,116,114,97)][_s(83,112,101,101,100)].Changed:Connect(function()_UV()end);_VV[_s(70,108,121,83,112,101,101,100)].Changed:Connect(function()_UV()end);_UV();if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,119,115)][_s(86,97,108,117,101)]then _LWS()end;if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,106,112)][_s(86,97,108,117,101)]then _LJP()end;if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(76,111,111,112,70,111,118)][_s(86,97,108,117,101)]then _LFV()end;if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(70,108,121)][_s(86,97,108,117,101)]then _STF()end;if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(67,70,108,121)][_s(86,97,108,117,101)]then _SCFS()end;if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(78,111,99,108,105,112)][_s(86,97,108,117,101)]then _LNC()end;if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(65,110,116,105,65,70,75)][_s(86,97,108,117,101)]then _LAF()end;if _TV[_s(80,108,97,121,101,114,83,112,108,111,105,116,115)][_s(78,97,107,101,100)][_s(86,97,108,117,101)]then _AN()end;task.spawn(function()while true do _UV();task.wait(1)end end)
+end;
+task.spawn(C_10);
+-- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\RageBot
+local function C_11()
+local script = G2L["11"];
+	local Player = game.Players.LocalPlayer
+	local UIS = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local camera = workspace.CurrentCamera
+	local AimSettings = script.Parent.Parent.Parent.Settings.Toggles.Extra
+	
+	local Active
+	local PosAbove
+	local ToggleKey = Enum.KeyCode.T -- Toggle key
+	
+	local isAiming = false
+	local rageActive = false
+	local currentTarget = nil
+	local targetScreenPos = nil
+	
+	-- Cache for performance
+	local cachedCharacters = {}
+	local lastCacheUpdate = 0
+	local CACHE_UPDATE_INTERVAL = 0.3
+	
+	-- Custom clamp function
+	local function clamp(value, min, max)
+		if not value or type(value) ~= "number" then
+			return min
+		end
+		return math.min(math.max(value, min), max)
+	end
+	
+	local function UpdateSettings()
+		Active = AimSettings.Ragebot.Value
+		PosAbove = tonumber(AimSettings.Parent.Parent.Values.RageBot.PosAbove.Value) or 10
+	
+		-- Clamp PosAbove to reasonable values
+		PosAbove = clamp(PosAbove, 1, 100)
+	end
+	
+	-- Cache characters to reduce lag
+	local function UpdateCharacterCache()
+		local currentTime = tick()
+		if currentTime - lastCacheUpdate < CACHE_UPDATE_INTERVAL then
+			return
+		end
+	
+		lastCacheUpdate = currentTime
+		cachedCharacters = {}
+	
+		-- Get player characters
+		for _, player in pairs(game.Players:GetPlayers()) do
+			if player ~= Player and player.Character then
+				local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+				if humanoid and humanoid.Health > 0 then
+					table.insert(cachedCharacters, player.Character)
+				end
+			end
+		end
+	
+		-- Get NPCs/Models with Humanoid
+		for _, obj in pairs(workspace:GetChildren()) do
+			if obj:IsA("Model") and obj ~= Player.Character then
+				local humanoid = obj:FindFirstChildOfClass("Humanoid")
+				if humanoid and humanoid.Health > 0 then
+					local alreadyAdded = false
+					for _, char in pairs(cachedCharacters) do
+						if char == obj then
+							alreadyAdded = true
+							break
+						end
+					end
+					if not alreadyAdded then
+						table.insert(cachedCharacters, obj)
+					end
+				end
+			end
+		end
+	end
+	
+	-- Find closest target
+	local function GetClosestTarget()
+		UpdateCharacterCache()
+	
+		local closestTarget = nil
+		local shortestDistance = math.huge
+	
+		local playerChar = Player.Character
+		if not playerChar or not playerChar:FindFirstChild("HumanoidRootPart") then
+			return nil
+		end
+	
+		local playerPos = playerChar.HumanoidRootPart.Position
+	
+		for _, character in pairs(cachedCharacters) do
+			-- Look for HumanoidRootPart or Torso
+			local targetPart = character:FindFirstChild("HumanoidRootPart") or character:FindFirstChild("Torso")
+	
+			if targetPart then
+				local distance = (targetPart.Position - playerPos).Magnitude
+	
+				if distance < shortestDistance then
+					shortestDistance = distance
+					closestTarget = targetPart
+				end
+			end
+		end
+	
+		return closestTarget
+	end
+	
+	-- Teleport player above target and make them look down
+	local function TeleportAboveTarget()
+		if not currentTarget then return end
+	
+		local playerChar = Player.Character
+		if not playerChar then return end
+	
+		local humanoidRootPart = playerChar:FindFirstChild("HumanoidRootPart")
+		if not humanoidRootPart then return end
+	
+		-- Get target position and validate it
+		local targetPos = currentTarget.Position
+	
+		-- Check if target position is valid (not NaN or inf)
+		if targetPos ~= targetPos or math.abs(targetPos.X) == math.huge or math.abs(targetPos.Y) == math.huge or math.abs(targetPos.Z) == math.huge then
+			warn("Invalid target position detected!")
+			currentTarget = nil
+			return
+		end
+	
+		-- Calculate position above target (with safety check)
+		local heightOffset = tonumber(PosAbove) or 10
+		local abovePos = Vector3.new(targetPos.X, targetPos.Y + heightOffset, targetPos.Z)
+	
+		-- Validate the above position
+		if abovePos ~= abovePos or math.abs(abovePos.Y) == math.huge then
+			warn("Invalid above position calculated!")
+			currentTarget = nil
+			return
+		end
+	
+		-- Create CFrame looking down at target
+		local lookAtCFrame = CFrame.new(abovePos, targetPos)
+	
+		-- Teleport player above target (use pcall for safety)
+		local success = pcall(function()
+			humanoidRootPart.CFrame = lookAtCFrame
+		end)
+	
+		if not success then
+			warn("Failed to teleport player!")
+			currentTarget = nil
+		end
+	end
+	
+	-- Force camera to lock on target
+	local function CameraLockOnTarget()
+		if not currentTarget then return end
+	
+		local playerChar = Player.Character
+		if not playerChar then return end
+	
+		local humanoidRootPart = playerChar:FindFirstChild("HumanoidRootPart")
+		if not humanoidRootPart then return end
+	
+		-- Look directly down at target
+		local targetPos = currentTarget.Position
+	
+		-- Validate target position
+		if targetPos ~= targetPos or math.abs(targetPos.X) == math.huge then
+			return
+		end
+	
+		-- Get current camera position
+		local currentCFrame = camera.CFrame
+	
+		-- Create look direction pointing down at target
+		local lookDirection = (targetPos - humanoidRootPart.Position).Unit
+	
+		-- Validate look direction
+		if lookDirection ~= lookDirection then
+			return
+		end
+	
+		-- Create target CFrame looking at target
+		local targetCFrame = CFrame.new(currentCFrame.Position, currentCFrame.Position + lookDirection)
+	
+		-- Instant camera lock (use pcall for safety)
+		pcall(function()
+			camera.CFrame = targetCFrame
+		end)
+	end
+	
+	-- Main RageBot function
+	local function ActivateRageBot()
+		if not Active or not rageActive then
+			currentTarget = nil
+			targetScreenPos = nil
+			return
+		end
+	
+		-- Get closest target
+		local target = GetClosestTarget()
+	
+		if target then
+			-- Validate target exists and has valid position
+			if target.Parent and target.Position == target.Position then
+				currentTarget = target
+	
+				-- Teleport player above target
+				TeleportAboveTarget()
+	
+				-- Force camera lock down at target
+				CameraLockOnTarget()
+			else
+				currentTarget = nil
+			end
+		else
+			currentTarget = nil
+			targetScreenPos = nil
+		end
+	end
+	
+	-- Toggle key handler
+	UIS.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		if input.KeyCode == ToggleKey then
+			rageActive = not rageActive
+	
+			if rageActive then
+				print(">>> RAGEBOT ACTIVATED <<<")
+				print("Player will hover above targets!")
+			else
+				print(">>> RAGEBOT DEACTIVATED <<<")
+				currentTarget = nil
+			end
+		end
+	end)
+	
+	-- Main RageBot loop
+	RunService.RenderStepped:Connect(function()
+		ActivateRageBot()
+	end)
+	
+	-- Settings update loop
+	spawn(function()
+		while true do
+			UpdateSettings()
+			wait(10)
+		end
+	end)
+	
+	-- Initial load
+	UpdateSettings()
+	print("=== RAGEBOT LOADED ===")
+	print("Press T to toggle RageBot")
+	print("Player will teleport above targets!")
+	print("PosAbove controls hover height (default: 10)")
+end;
+task.spawn(C_11);
+-- StarterGui.OpiamGUI.Scripts.Theme.ThemePreset.LocalScript
+local function C_1a()
+local script = G2L["1a"];
+	local themepreset = script.Parent
+	local ColorFolder = script.Parent.Parent.Colors
+	
+	local Themes = {
+		"Normal",
+		"Emerald",
+		"Old"
+	}
+	
+	local ThemesColors = {
+		["Normal"] = {
+			["Select Color"] = Color3.fromRGB(200, 70, 240),
+			["Select Color2"] = Color3.fromRGB(50, 18, 68),
+			["Color"] = Color3.fromRGB(200, 70, 240),
+			["ShadowColor"] = Color3.fromRGB(60, 20, 80),
+			["IconSelectColor"] = Color3.fromRGB(210, 74, 255),
+		},
+		["Emerald"] = {
+			["Select Color"] = Color3.fromRGB(0, 200, 100),
+			["Select Color2"] = Color3.fromRGB(10, 50, 30),
+			["Color"] = Color3.fromRGB(0, 200, 100),
+			["ShadowColor"] = Color3.fromRGB(0, 85, 43),
+			["IconSelectColor"] = Color3.fromRGB(0, 230, 115),
+		},
+		["Old"] = {
+			["Select Color"] = Color3.fromRGB(255, 255, 255),
+			["Select Color2"] = Color3.fromRGB(40, 40, 40),
+			["Color"] = Color3.fromRGB(200, 200, 200),
+			["ShadowColor"] = Color3.fromRGB(180, 180, 180),
+			["IconSelectColor"] = Color3.fromRGB(255, 255, 255),
+		},
+	
+		["Matcha"] = {
+			["Select Color"] = Color3.fromRGB(134, 185, 120),     -- muted sage green strip
+			["Select Color2"] = Color3.fromRGB(30, 52, 28),       -- deep matcha button background
+			["Color"] = Color3.fromRGB(134, 185, 120),            -- soft sage accent
+			["ShadowColor"] = Color3.fromRGB(80, 120, 70),        -- darker green shadow
+			["IconSelectColor"] = Color3.fromRGB(180, 220, 160),  -- light tea green icon
+		},
+	
+		["Cinnamon"] = {
+			["Select Color"] = Color3.fromRGB(210, 105, 30),      -- warm cinnamon strip
+			["Select Color2"] = Color3.fromRGB(55, 25, 10),       -- dark toasted brown button background
+			["Color"] = Color3.fromRGB(210, 105, 30),             -- spice orange accent
+			["ShadowColor"] = Color3.fromRGB(120, 55, 15),        -- deep burnt shadow
+			["IconSelectColor"] = Color3.fromRGB(240, 150, 80),   -- warm amber icon
+		},
+	}
+	
+	local function ApplyValidTheme(theme)
+		if not ThemesColors[theme] then
+			warn("Invalid theme selected: " .. tostring(theme))
+			return
+		end
+		
+		local themeColors = ThemesColors[theme]
+		
+		if theme == "Normal" then
+			ColorFolder["Select Color"].Value = themeColors["Select Color"]
+			ColorFolder["Select Color2"].Value = themeColors["Select Color2"]
+			ColorFolder["Color"].Value = themeColors["Color"]
+			ColorFolder["ShadowColor"].Value = themeColors["ShadowColor"]
+			ColorFolder["IconSelectColor"].Value = themeColors["IconSelectColor"]
+		elseif theme == "Emerald" then
+			ColorFolder["Select Color"].Value = themeColors["Select Color"]
+			ColorFolder["Select Color2"].Value = themeColors["Select Color2"]
+			ColorFolder["Color"].Value = themeColors["Color"]
+			ColorFolder["ShadowColor"].Value = themeColors["ShadowColor"]
+			ColorFolder["IconSelectColor"].Value = themeColors["IconSelectColor"]
+		elseif theme == "Old" then
+			ColorFolder["Select Color"].Value = themeColors["Select Color"]
+			ColorFolder["Select Color2"].Value = themeColors["Select Color2"]
+			ColorFolder["Color"].Value = themeColors["Color"]
+			ColorFolder["ShadowColor"].Value = themeColors["ShadowColor"]
+			ColorFolder["IconSelectColor"].Value = themeColors["IconSelectColor"]
+			elseif theme == "Matcha" then
+			ColorFolder["Select Color"].Value = themeColors["Select Color"]
+			ColorFolder["Select Color2"].Value = themeColors["Select Color2"]
+			ColorFolder["Color"].Value = themeColors["Color"]
+			ColorFolder["ShadowColor"].Value = themeColors["ShadowColor"]
+			ColorFolder["IconSelectColor"].Value = themeColors["IconSelectColor"]
+		elseif theme == "Cinnamon" then
+			ColorFolder["Select Color"].Value = themeColors["Select Color"]
+			ColorFolder["Select Color2"].Value = themeColors["Select Color2"]
+			ColorFolder["Color"].Value = themeColors["Color"]
+			ColorFolder["ShadowColor"].Value = themeColors["ShadowColor"]
+			ColorFolder["IconSelectColor"].Value = themeColors["IconSelectColor"]
+		else
+			warn("Invalid theme selected: " .. tostring(theme))
+		end
+	end
+	
+	ApplyValidTheme(themepreset.Value)
+	
+	themepreset:GetPropertyChangedSignal("Value"):Connect(function()
+		ApplyValidTheme(themepreset.Value)
+	end)
+end;
+task.spawn(C_1a);
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.Time.TextLabel.LocalScript
+local function C_65()
+local script = G2L["65"];
+	local text = script.Parent
+	local player = game.Players.LocalPlayer
+	
+	-- Function to get current time with AM/PM
+	local function getCurrentTime()
+		-- Get current time
+		local now = os.date("*t")
+	
+		-- Convert to 12-hour format
+		local hour = now.hour
+		local ampm = "AM"
+	
+		if hour >= 12 then
+			ampm = "PM"
+			if hour > 12 then
+				hour = hour - 12
+			end
+		elseif hour == 0 then
+			hour = 12
+		end
+	
+		-- Format the time string
+		return string.format("%d:%02d %s", hour, now.min, ampm)
+	end
+	
+	-- Function to update the text
+	local function updateTime()
+		text.Text = getCurrentTime()
+	end
+	
+	-- Update immediately
+	updateTime()
+	
+	-- Update every second to keep time current
+	game:GetService("RunService").Heartbeat:Connect(function()
+		-- Only update once per second to avoid unnecessary updates
+		if tick() % 1 < 0.03 then -- Approximate once per second
+			updateTime()
+		end
+	end)
+end;
+task.spawn(C_65);
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.FPS.TextLabel.LocalScript
+local function C_6b()
+local script = G2L["6b"];
+	local RunService = game:GetService("RunService")
+	local fpsLabel = script.Parent
+	
+	local frameCount = 0
+	local lastTime = tick()
+	local updateInterval = 1 -- Update every second
+	
+	RunService.Heartbeat:Connect(function()
+		frameCount += 1
+		local now = tick()
+		if now - lastTime >= updateInterval then
+			local fps = math.floor(frameCount / (now - lastTime))
+			fpsLabel.Text = "FPS: " .. fps
+			frameCount = 0
+			lastTime = now
+			if fps < 30 then
+				fpsLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+			elseif fps < 60 then
+				fpsLabel.TextColor3 = Color3.fromRGB(80, 220, 130)
+			end
+		end
+	end)
+end;
+task.spawn(C_6b);
+-- StarterGui.OpiamGUI.Holder.UI Addons.Top.MS.TextLabel.LocalScript
+local function C_70()
+local script = G2L["70"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local PingLabel = script.Parent
+	
+	local timeSinceUpdate = 0
+	
+	RunService.Heartbeat:Connect(function(dt)
+		timeSinceUpdate += dt
+		if timeSinceUpdate >= 1 then
+			timeSinceUpdate = 0
+			local ping = math.floor(Players.LocalPlayer:GetNetworkPing() * 1000)
+			PingLabel.Text = "Ping: " .. ping .. "ms"
+			if ping < 100 then
+				PingLabel.TextColor3 = Color3.fromRGB(80, 220, 130)
+				elseif ping < 200 then
+				PingLabel.TextColor3 = Color3.fromRGB(255, 255, 0)
+			else
+				PingLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+			end
+		end
+	end)
+end;
+task.spawn(C_70);
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Dragify
+local function C_73()
+local script = G2L["73"];
+	--This script has been modified by MetaliumWorks (@jgfuhjkkl_2) [mw/ʍɯ]
+	
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    dragSpeed = 0.25
+	    dragInput = nil
+	    dragStart = nil
+	    dragPos = nil
+	    function updateInput(input)
+	        Delta = input.Position - dragStart
+	        Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.20, Enum.EasingStyle.Back), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end;
+task.spawn(C_73);
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+local function C_7f()
+local script = G2L["7f"];
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.FPS.Visible = not script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.FPS.Visible
+		
+		if script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.FPS.Visible then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end)
+end;
+task.spawn(C_7f);
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+local function C_84()
+local script = G2L["84"];
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.MS.Visible = not script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.MS.Visible
+	
+		if script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.MS.Visible then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end)
+end;
+task.spawn(C_84);
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+local function C_89()
+local script = G2L["89"];
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Settings.Toggles.Extra.JoinLeaveNotifs.Value = not script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Settings.Toggles.Extra.JoinLeaveNotifs.Value
+	
+		if script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Settings.Toggles.Extra.JoinLeaveNotifs.Value then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end)
+end;
+task.spawn(C_89);
+-- StarterGui.OpiamGUI.Holder.Settings Panel.Holder.ScrollingFrame.- Core.Holder.inholder.Toggle.LocalScript
+local function C_92()
+local script = G2L["92"];
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.Time.Visible = not script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.Time.Visible
+	
+		if script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["UI Addons"].Top.Time.Visible then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end)
+end;
+task.spawn(C_92);
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.Aimbot.LocalScript
+local function C_9f()
+local script = G2L["9f"];
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.Parent["Debug Holder"].Aimbot.Visible = true
+		script.Parent.Parent.Parent.Parent["Debug Holder"].Esp.Visible = false
+	
+	end)
+end;
+task.spawn(C_9f);
+-- StarterGui.OpiamGUI.Holder.Debug Panel.TitleBar.Tabs.ESP.LocalScript
+local function C_a3()
+local script = G2L["a3"];
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.Parent["Debug Holder"].Aimbot.Visible = false
+		script.Parent.Parent.Parent.Parent["Debug Holder"].Esp.Visible = true
+	
+	end)
+end;
+task.spawn(C_a3);
+
+return G2L["1"], require;
