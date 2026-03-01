@@ -1,11 +1,12 @@
 --[=[
- ██████  ██████  ██  █████  ███    ███     ██   ██ ██    ██ ██████  
-██    ██ ██   ██ ██ ██   ██ ████  ████     ██   ██ ██    ██ ██   ██ 
-██    ██ ██████  ██ ███████ ██ ████ ██     ███████ ██    ██ ██████  
-██    ██ ██      ██ ██   ██ ██  ██  ██     ██   ██ ██    ██ ██   ██ 
- ██████  ██      ██ ██   ██ ██      ██     ██   ██  ██████  ██████ -- @lolcatwastaken -- Obfuscated By Opiam Obfuscator v5.0.0 :3
+ ██████  ██████  ██  █████  ███    ███ 
+██    ██ ██   ██ ██ ██   ██ ████  ████ 
+██    ██ ██████  ██ ███████ ██ ████ ██ 
+██    ██ ██      ██ ██   ██ ██  ██  ██ 
+ ██████  ██      ██ ██   ██ ██      ██ obfuscated!
 ]=]
 
+-- Instances: 171 | Scripts: 21 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.OpiamGUI
@@ -1366,14 +1367,14 @@ task.spawn(C_2);
 local function C_3()
 local script = G2L["3"];
 	--[=[
-	 ██████  ██████  ██  █████  ███    ███ 
-	██    ██ ██   ██ ██ ██   ██ ████  ████ 
-	██    ██ ██████  ██ ███████ ██ ████ ██ 
-	██    ██ ██      ██ ██   ██ ██  ██  ██ 
-	 ██████  ██      ██ ██   ██ ██      ██
+	 ██████  ██████  ██  █████  ███    ███     ██   ██ ██    ██ ██████  
+	██    ██ ██   ██ ██ ██   ██ ████  ████     ██   ██ ██    ██ ██   ██ 
+	██    ██ ██████  ██ ███████ ██ ████ ██     ███████ ██    ██ ██████  
+	██    ██ ██      ██ ██   ██ ██  ██  ██     ██   ██ ██    ██ ██   ██ 
+	 ██████  ██      ██ ██   ██ ██      ██     ██   ██  ██████  ██████
 	]=]
 	
-	
+	-- Instances: 707 | Scripts: 113 | Modules: 0 | Tags: 0
 	local G2L = {};
 	
 	-- StarterGui.OpiamGUI.Gui
@@ -6598,20 +6599,20 @@ local script = G2L["3"];
 	G2L["299"]["Position"] = UDim2.new(0.06176, 0, 0.09722, 0);
 	
 	
+	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.hand.LocalScript
+	G2L["29a"] = Instance.new("LocalScript", G2L["299"]);
+	
+	
+	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.hand.UICorner
-	G2L["29a"] = Instance.new("UICorner", G2L["299"]);
-	G2L["29a"]["CornerRadius"] = UDim.new(0.1, 0);
+	G2L["29b"] = Instance.new("UICorner", G2L["299"]);
+	G2L["29b"]["CornerRadius"] = UDim.new(0.1, 0);
 	
 	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.hand.UIStroke
-	G2L["29b"] = Instance.new("UIStroke", G2L["299"]);
-	G2L["29b"]["Color"] = Color3.fromRGB(41, 41, 56);
-	G2L["29b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-	
-	
-	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.hand.LocalScript
-	G2L["29c"] = Instance.new("LocalScript", G2L["299"]);
-	
+	G2L["29c"] = Instance.new("UIStroke", G2L["299"]);
+	G2L["29c"]["Color"] = Color3.fromRGB(41, 41, 56);
+	G2L["29c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 	
 	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.mz
@@ -6630,20 +6631,20 @@ local script = G2L["3"];
 	G2L["29d"]["Position"] = UDim2.new(0.3955, 0, 0.09722, 0);
 	
 	
+	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.mz.LocalScript
+	G2L["29e"] = Instance.new("LocalScript", G2L["29d"]);
+	
+	
+	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.mz.UICorner
-	G2L["29e"] = Instance.new("UICorner", G2L["29d"]);
-	G2L["29e"]["CornerRadius"] = UDim.new(0.1, 0);
+	G2L["29f"] = Instance.new("UICorner", G2L["29d"]);
+	G2L["29f"]["CornerRadius"] = UDim.new(0.1, 0);
 	
 	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.mz.UIStroke
-	G2L["29f"] = Instance.new("UIStroke", G2L["29d"]);
-	G2L["29f"]["Color"] = Color3.fromRGB(41, 41, 56);
-	G2L["29f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-	
-	
-	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.mz.LocalScript
-	G2L["2a0"] = Instance.new("LocalScript", G2L["29d"]);
-	
+	G2L["2a0"] = Instance.new("UIStroke", G2L["29d"]);
+	G2L["2a0"]["Color"] = Color3.fromRGB(41, 41, 56);
+	G2L["2a0"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 	
 	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.scriptblox
@@ -6662,20 +6663,20 @@ local script = G2L["3"];
 	G2L["2a1"]["Position"] = UDim2.new(0.72923, 0, 0.09722, 0);
 	
 	
+	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.scriptblox.LocalScript
+	G2L["2a2"] = Instance.new("LocalScript", G2L["2a1"]);
+	
+	
+	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.scriptblox.UICorner
-	G2L["2a2"] = Instance.new("UICorner", G2L["2a1"]);
-	G2L["2a2"]["CornerRadius"] = UDim.new(0.1, 0);
+	G2L["2a3"] = Instance.new("UICorner", G2L["2a1"]);
+	G2L["2a3"]["CornerRadius"] = UDim.new(0.1, 0);
 	
 	
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.scriptblox.UIStroke
-	G2L["2a3"] = Instance.new("UIStroke", G2L["2a1"]);
-	G2L["2a3"]["Color"] = Color3.fromRGB(41, 41, 56);
-	G2L["2a3"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-	
-	
-	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.scriptblox.LocalScript
-	G2L["2a4"] = Instance.new("LocalScript", G2L["2a1"]);
-	
+	G2L["2a4"] = Instance.new("UIStroke", G2L["2a1"]);
+	G2L["2a4"]["Color"] = Color3.fromRGB(41, 41, 56);
+	G2L["2a4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 	
 	
 	-- StarterGui.OpiamGUI.Gui.Root.Sounds
@@ -7152,7 +7153,7 @@ local script = G2L["3"];
 			local pagetarget = script.Parent.Parent.Parent.Holder:FindFirstChild(page)
 			for _, pg in pairs(script.Parent.Parent.Parent.Holder:GetChildren()) do
 				if pg:IsA("ScrollingFrame") or pg:IsA("Frame") then
-					if pg.Name == "Donttouch" then return end
+					if pg.Name == "Donttouch" then continue end
 					pg.Visible = pg == pagetarget
 				end
 			end
@@ -10011,7 +10012,7 @@ local script = G2L["3"];
 				local scripts = data.result.scripts
 	
 				for _, scriptData in ipairs(scripts) do
-					local web = "https://rawscripts.net/raw/" .. scriptData.slug
+					local web = "https://scriptblox.com/api/script/raw/" .. scriptData.slug
 					MakeButtonToExecute(web, {
 						Name = scriptData.title,
 						Type = scriptData.scriptType or "Script"
@@ -10020,7 +10021,7 @@ local script = G2L["3"];
 			else
 				game.StarterGui:SetCore("SendNotification", {
 					Title = "Fetch Failed";
-					Text = "Could not load scripts from scriptblox.com/api.";
+					Text = "Could not load scripts from ScriptBlox.";
 					Icon = "";
 					Duration = 4;
 				})
@@ -10079,7 +10080,6 @@ local script = G2L["3"];
 		local holder = script.Parent
 		local layoutorder = 2
 		local HttpService = game:GetService("HttpService")
-	
 		local Buttons = {}
 		local cooldowns = {}
 	
@@ -10146,13 +10146,12 @@ local script = G2L["3"];
 	
 			if success then
 				local data = HttpService:JSONDecode(result)
-				local scripts = data.result.scripts
 	
-				for _, scriptData in ipairs(scripts) do
-					local web = "https://rawscripts.net/raw/" .. scriptData.slug
+				for _, scriptData in ipairs(data.data) do -- key is "data", not "result.scripts"
+					local web = "https://mzscripts.com/api/script-download?id=" .. scriptData.id
 					MakeButtonToExecute(web, {
 						Name = scriptData.title,
-						Type = scriptData.scriptType or "Script"
+						Type = scriptData.author or "Script"
 					})
 				end
 			else
@@ -10166,12 +10165,12 @@ local script = G2L["3"];
 		end
 	
 		task.spawn(function()
-			while task.wait(500) do -- 500 seconds is more reasonable than 1
+			while task.wait(500) do
 				RefreshAllButtons()
 			end
 		end)
 	
-		RefreshAllButtons() -- initial load
+		RefreshAllButtons()
 	end;
 	task.spawn(C_28a);
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.MZ.theme
@@ -10211,8 +10210,8 @@ local script = G2L["3"];
 	end;
 	task.spawn(C_296);
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.hand.LocalScript
-	local function C_29c()
-		local script = G2L["29c"];
+	local function C_29a()
+		local script = G2L["29a"];
 		script.Parent.Activated:Connect(function()
 			for _, v in pairs(script.Parent.Parent.Parent:GetChildren()) do
 				if v:IsA("ScrollingFrame") then
@@ -10223,10 +10222,10 @@ local script = G2L["3"];
 			script.Parent.Parent.Parent["Picked Scripts"].Visible = true
 		end)
 	end;
-	task.spawn(C_29c);
+	task.spawn(C_29a);
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.mz.LocalScript
-	local function C_2a0()
-		local script = G2L["2a0"];
+	local function C_29e()
+		local script = G2L["29e"];
 		script.Parent.Activated:Connect(function()
 			for _, v in pairs(script.Parent.Parent.Parent:GetChildren()) do
 				if v:IsA("ScrollingFrame") then
@@ -10237,10 +10236,10 @@ local script = G2L["3"];
 			script.Parent.Parent.Parent["MZ"].Visible = true
 		end)
 	end;
-	task.spawn(C_2a0);
+	task.spawn(C_29e);
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.Buttons.scriptblox.LocalScript
-	local function C_2a4()
-		local script = G2L["2a4"];
+	local function C_2a2()
+		local script = G2L["2a2"];
 		script.Parent.Activated:Connect(function()
 			for _, v in pairs(script.Parent.Parent.Parent:GetChildren()) do
 				if v:IsA("ScrollingFrame") then
@@ -10251,7 +10250,7 @@ local script = G2L["3"];
 			script.Parent.Parent.Parent["ScriptBlox"].Visible = true
 		end)
 	end;
-	task.spawn(C_2a4);
+	task.spawn(C_2a2);
 	-- StarterGui.OpiamGUI.Gui.Toggle UI.LocalScript
 	local function C_2aa()
 		local script = G2L["2aa"];
@@ -10676,6 +10675,10 @@ local script = G2L["f"];
 	
 	-- Initial load
 	UpdateSettings()
+	print("=== RAGEBOT LOADED ===")
+	print("Press T to toggle RageBot")
+	print("Player will teleport above targets!")
+	print("PosAbove controls hover height (default: 10)")
 end;
 task.spawn(C_f);
 -- StarterGui.OpiamGUI.Scripts.Exploits.Scripts\World.Scripts\World\Proximity
