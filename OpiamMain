@@ -1386,7 +1386,7 @@ local script = G2L["3"];
 	local G2L = {};
 	
 	-- StarterGui.OpiamGUI.Gui
-	G2L["1"] = Instance.new("ScreenGui", script.Parent;
+	G2L["1"] = Instance.new("ScreenGui", script.Parent);
 		G2L["1"]["IgnoreGuiInset"] = true;
 		G2L["1"]["DisplayOrder"] = 10000;
 		G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
