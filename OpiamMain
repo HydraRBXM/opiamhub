@@ -9939,102 +9939,125 @@ local script = G2L["3"];
 	local function C_27c()
 		local script = G2L["27c"];
 		local preset = script.Preset
-		local holder = script.Parent
-		local layoutorder = 2
-		local HttpService = game:GetService("HttpService")
-	
-		local Buttons = {}
-		local cooldowns = {}
-	
-		local function LoadLoadString(web)
-			local success, err = pcall(function()
-				loadstring(game:HttpGet(web, true))()
-			end)
-			if not success then
-				game.StarterGui:SetCore("SendNotification", {
-					Title = "Loadstring Error!!!";
-					Text = "Got: " .. tostring(err);
-					Icon = "";
-					Duration = 5;
-				})
-			else
-				game.StarterGui:SetCore("SendNotification", {
-					Title = "Loadstring Success!";
-					Text = "Loadstring: " .. web;
-					Icon = "";
-					Duration = 3;
-				})
-			end
+local holder = script.Parent
+local layoutorder = 2
+local HttpService = game:GetService("HttpService")
+
+local Buttons = {}
+local cooldowns = {}
+
+local function LoadLoadString(web)
+	local success, err = pcall(function()
+		loadstring(game:HttpGet(web, true))()
+	end)
+	if not success then
+		print("[ScriptBlox] Loadstring failed:", err)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Loadstring Error!!!";
+			Text = "Got: " .. tostring(err);
+			Icon = "";
+			Duration = 5;
+		})
+	else
+		print("[ScriptBlox] Loadstring success:", web)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Loadstring Success!";
+			Text = "Loadstring: " .. web;
+			Icon = "";
+			Duration = 3;
+		})
+	end
+end
+
+local function MakeButtonToExecute(web, data)
+	local Button = preset:Clone()
+	Button.Name = "Loadstring"
+	Button.info.Text = data.Type
+	Button.loadnamke.Text = data.Name
+	Button.LayoutOrder = layoutorder
+	layoutorder += 1
+	Button.Parent = holder
+	table.insert(Buttons, Button)
+	Button.TextButton.MouseButton1Click:Connect(function()
+		if cooldowns[web] then
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Slow down!";
+				Text = "Wait a second before clicking again.";
+				Icon = "";
+				Duration = 2;
+			})
+			return
 		end
-	
-		local function MakeButtonToExecute(web, data)
-			local Button = preset:Clone()
-			Button.Name = "Loadstring"
-			Button.info.Text = data.Type
-			Button.loadnamke.Text = data.Name
-			Button.LayoutOrder = layoutorder
-			layoutorder += 1
-			Button.Parent = holder
-			table.insert(Buttons, Button)
-			Button.TextButton.MouseButton1Click:Connect(function()
-				if cooldowns[web] then
-					game.StarterGui:SetCore("SendNotification", {
-						Title = "Slow down!";
-						Text = "Wait a second before clicking again.";
-						Icon = "";
-						Duration = 2;
-					})
-					return
-				end
-				cooldowns[web] = true
-				LoadLoadString(web)
-				task.delay(2, function()
-					cooldowns[web] = nil
-				end)
-			end)
-		end
-	
-		local function RefreshAllButtons()
-			for _, button in ipairs(holder:GetChildren()) do
-				if button:IsA("Frame") and button ~= preset then
-					button:Destroy()
-				end
-			end
-			layoutorder = 2
-			Buttons = {}
-	
-			local success, result = pcall(function()
-				return HttpService:GetAsync("https://scriptblox.com/api/script/fetch")
-			end)
-	
-			if success then
-				local data = HttpService:JSONDecode(result)
-				local scripts = data.result.scripts
-	
-				for _, scriptData in ipairs(scripts) do
-					local web = "https://scriptblox.com/api/script/raw/" .. scriptData.slug
-					MakeButtonToExecute(web, {
-						Name = scriptData.title,
-						Type = scriptData.scriptType or "Script"
-					})
-				end
-			else
-				game.StarterGui:SetCore("SendNotification", {
-					Title = "Fetch Failed";
-					Text = "Could not load scripts from ScriptBlox.";
-					Icon = "";
-					Duration = 4;
-				})
-			end
-		end
-	
-		task.spawn(function()
-			while task.wait(500) do -- 500 seconds is more reasonable than 1
-				RefreshAllButtons()
-			end
+		cooldowns[web] = true
+		LoadLoadString(web)
+		task.delay(2, function()
+			cooldowns[web] = nil
 		end)
-	
-		RefreshAllButtons() -- initial load
+	end)
+end
+
+local function RefreshAllButtons()
+	for _, button in ipairs(holder:GetChildren()) do
+		if button:IsA("Frame") and button ~= preset then
+			button:Destroy()
+		end
+	end
+	layoutorder = 2
+	Buttons = {}
+
+	print("[ScriptBlox] Fetching scripts...")
+
+	local success, result = pcall(function()
+		return HttpService:GetAsync("https://scriptblox.com/api/script/fetch")
+	end)
+
+	if not success then
+		print("[ScriptBlox] HTTP request failed:", result)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Fetch Failed";
+			Text = "Could not load scripts from ScriptBlox.";
+			Icon = "";
+			Duration = 4;
+		})
+		return
+	end
+
+	print("[ScriptBlox] HTTP success, parsing JSON...")
+
+	local parseSuccess, data = pcall(function()
+		return HttpService:JSONDecode(result)
+	end)
+
+	if not parseSuccess then
+		print("[ScriptBlox] JSON parse failed:", data)
+		return
+	end
+
+	if not data.result or not data.result.scripts then
+		print("[ScriptBlox] Unexpected response structure:", result)
+		return
+	end
+
+	local scripts = data.result.scripts
+	print("[ScriptBlox] Loaded", #scripts, "scripts")
+
+	for _, scriptData in ipairs(scripts) do
+		local web = "https://scriptblox.com/api/script/raw/" .. scriptData.slug
+		print("[ScriptBlox] Adding button:", scriptData.title, "->", web)
+		MakeButtonToExecute(web, {
+			Name = scriptData.title,
+			Type = scriptData.scriptType or "Script"
+		})
+	end
+end
+
+task.spawn(function()
+	while task.wait(500) do
+		RefreshAllButtons()
+	end
+end)
+
+RefreshAllButtons() -- initial load
 	end;
 	task.spawn(C_27c);
 	-- StarterGui.OpiamGUI.Gui.Root.Holder.Scripts.ScriptBlox.theme
