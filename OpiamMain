@@ -1401,7 +1401,7 @@ local script = G2L["3"];
 		G2L["2"]["Size"] = UDim2.new(0, 535, 0, 500);
 		G2L["2"]["Position"] = UDim2.new(0.5, -697, 0.5, -189);
 		G2L["2"]["Name"] = [[Root]];
-		G2L["2"]["Visible"] = false;
+		G2L["2"]["Visible"] = true;
 		G2L["2"]["BackgroundTransparency"] = 1;
 	
 	
